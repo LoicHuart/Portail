@@ -222,6 +222,31 @@
 	background: url('../doc/img/cate/doc/jquery.jpg') no-repeat top center;
     background-size: 100%;
     }
+/* troisieme --------------------------------------------- */
+
+#troisieme{
+    background-color: #E6E6E6;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    height: 295px;
+    text-align: center;
+}
+
+#glpi{
+    background: url('../doc/img/cate/glpi.jpg') no-repeat top center;
+    background-size: 100%;
+}
+#aff{
+    background: url('../doc/img/cate/aff.jpg') no-repeat top center;
+    background-size: 100%;
+}
+#sig{
+    background: url('../doc/img/cate/sig.jpg') no-repeat top center;
+    background-size: 100%;
+}
+
+
+
 
 /* FOOTER */
 
