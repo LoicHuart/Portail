@@ -2,7 +2,7 @@ $(document).ready(function(){
        
 $(".oui").owlCarousel({ //carrousel n°1
     items:3,
-    loop:true,
+    loop:false,
     margin:5,
     nav:true,
     dots: true,
