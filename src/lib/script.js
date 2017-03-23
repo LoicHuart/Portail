@@ -1,7 +1,7 @@
 $(document).ready(function(){
        
 $(".oui").owlCarousel({ //carrousel n°1
-    items:4,
+    items:3,
     loop:true,
     margin:5,
     nav:true,
@@ -19,9 +19,9 @@ $(".oui").owlCarousel({ //carrousel n°1
             
         },
         1000:{
-            items:5,
+            items:4,
             nav: false
-            
+
         }
     }
  
@@ -51,7 +51,34 @@ $(".non").owlCarousel({ //carrousel n°2
         }
     }
   
-  });	   
+  });
+
+
+    $(".carou").owlCarousel({ //carrousel n°3
+        items:3,
+        margin:5,
+        nav:true,
+        dots: true,
+        autoplay: true,
+        responsive:{
+            0:{
+                items:1,
+                nav: false
+
+            },
+            600:{
+                items:3,
+                dots: false
+
+            },
+            1000:{
+                items:3,
+                nav: false
+
+            }
+        }
+
+    });
 
 var iWindowsSize = $(window).width();
 if (iWindowsSize >=500 ){  // SI LA TAILLE DE LA FENETRE EST SUPERIEUR A 500PX, TU EXECUTE SES SCRIPTS (version PC/Tablette)
