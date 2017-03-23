@@ -19,7 +19,7 @@
     .wrapper{ /* conteneur permettant de centrer les elements */
 	width: 1200px;
 	margin: 0 auto;
-	padding: 0 0px;
+	padding: 0 0;
     }
     .clear{
 	clear: both;
