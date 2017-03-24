@@ -189,7 +189,7 @@ p{
 #mysql{
     background: url('../doc/img/cate/doc/mysql.jpg') no-repeat top center;
     background-size: 100%;
-
+}
 #javascript{
     background: url('../doc/img/cate/doc/javasc.jpg') no-repeat top center;
     background-size: 100%;
@@ -210,7 +210,6 @@ p{
     padding-top: 30px;
     text-align: center;
 }
-
 #glpi{
     background: url('../doc/img/cate/glpi.jpg') no-repeat top center;
     background-size: 100%;
