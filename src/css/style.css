@@ -66,6 +66,12 @@ ul{
 .item:hover{ /* QUAND L'UTILISATEUR PASSE LA SOURIS SUR LES ELEMENTS  */
 
 }
+.item  h4{
+    text-align: left;
+}
+.item p{
+    text-align: left;
+}
 /* HEADER --------------------------------------------- */
 
 header{ /* BARRE BLANCHE DE DEBUT */
@@ -84,6 +90,7 @@ header{ /* BARRE BLANCHE DE DEBUT */
     padding-bottom: 20px;
     width: 1200px;
     margin: 0 auto;
+    text-align: center;
 }
 p{
     line-height: 20px;
