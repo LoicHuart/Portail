@@ -1,72 +1,72 @@
 /* GENERAL --------------------------------------------- */
-    *{
-	margin: 0;
-	padding: 0;
-    }
-    html, body{
-	height: 100%;
-    }
-    html{
-	width: 100%;
-    }
-    body{
-	font-family: Arial,sans-serif;
-	font-size: 15px;
-	position: relative;
-	overflow-x: hidden;
+*{
+    margin: 0;
+    padding: 0;
+}
+html, body{
+    height: 100%;
+}
+html{
+    width: 100%;
+}
+body{
+    font-family: Arial,sans-serif;
+    font-size: 15px;
+    position: relative;
+    overflow-x: hidden;
     background-color: #444;
-    }
-    .wrapper{ /* conteneur permettant de centrer les elements */
-	width: 1200px;
-	margin: 0 auto;
-	padding: 0 0;
-    }
-    .clear{
-	clear: both;
-    }
-    h1{
-	padding-top: 22px;
+}
+.wrapper{ /* conteneur permettant de centrer les elements */
+    width: 1200px;
+    margin: 0 auto;
+    padding: 0 0;
+}
+.clear{
+    clear: both;
+}
+h1{
+    padding-top: 22px;
     font-family: 'Antic', sans-serif;
-	font-size: 45px;
-	color: #444444;
-    }
-    h4{
-	color: #444;
-	font-size: 18px;
+    font-size: 45px;
+    color: #444444;
+}
+h4{
+    color: #444;
+    font-size: 18px;
     margin-bottom: 10px;
-    }
-    .overlay{ /* truc blanc transparent derriere le titre de chaque element */
-	background: rgba(255,255,255, 0.90);
-	height: 80px;
-	width: 100%;
-	box-sizing: border-box;
-	padding: 20px 5px 0 5px;
+}
+.overlay{ /* truc blanc transparent derriere le titre de chaque element */
+    background: rgba(255,255,255, 0.90);
+    height: 80px;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 20px 5px 0 5px;
     margin-top: 40px;
-    }
-    .overlay p{ /* petit texte dans chaque element (le jquery le fait apparaitre au passage de la souris) */
+}
+.overlay p{ /* petit texte dans chaque element (le jquery le fait apparaitre au passage de la souris) */
     display: none;
-    }
-    a{
+}
+a{
     text-decoration: none;
-    }
-    ul{
-	list-style: none;
-    }
+}
+ul{
+    list-style: none;
+}
 
-/* CAROUSELS DU SITE */ 
+/* CAROUSELS DU SITE */
 
-    .item{ /* element du carousel */
-	padding-top: 130px;
-	border: 1px solid #A4A4A4;
-	height: 120px;
-    }
-    .owl-carousel{ /* carousel general */
+.item{ /* element du carousel */
+    padding-top: 130px;
+    border: 1px solid #A4A4A4;
+    height: 120px;
+}
+.owl-carousel{ /* carousel general */
     margin-top: 10px;
-    }
-    .owl-theme .owl-controls .owl-page { /* THEME DU CAROUSEL NE PAS TOUCHER */
+}
+.owl-theme .owl-controls .owl-page { /* THEME DU CAROUSEL NE PAS TOUCHER */
     display: inline-block;
-    }
-    .owl-theme .owl-controls .owl-page span { /* THEME DU CAROUSEL NE PAS TOUCHER */
+}
+.owl-theme .owl-controls .owl-page span { /* THEME DU CAROUSEL NE PAS TOUCHER */
     background: none repeat scroll 0 0 #869791;
     border-radius: 20px;
     display: block;
@@ -74,35 +74,35 @@
     margin: 5px 7px;
     opacity: 0.5;
     width: 12px;
-    }
-    .item:hover{ /* QUAND L'UTILISATEUR PASSE LA SOURIS SUR LES ELEMENTS  */
-    
-	}
+}
+.item:hover{ /* QUAND L'UTILISATEUR PASSE LA SOURIS SUR LES ELEMENTS  */
+
+}
 /* HEADER --------------------------------------------- */
 
-    header{ /* BARRE BLANCHE DE DEBUT */
-	height : 90px;
-	background-color: #fff;
-    }
-    .MainTitle{  /* titre principale du site (en haut a gauche) */
+header{ /* BARRE BLANCHE DE DEBUT */
+    height : 90px;
+    background-color: #fff;
+}
+.MainTitle{  /* titre principale du site (en haut a gauche) */
     float: left;
-    }
-    #menu{ /* icone en haut a droite (3 petites barres) */
+}
+#menu{ /* icone en haut a droite (3 petites barres) */
     float:right;
     padding-top: 22px;
-    }
-    .per{ /* texte en dessous des gros titres et avec une barre en dessous */
-	border-bottom: 1px solid #BDBDBD ;
-	padding-bottom: 20px;
-	width: 1200px;
-	margin: 0 auto;
-    }
-    p{
-	line-height: 20px;
-	color: #777;
-    }
+}
+.per{ /* texte en dessous des gros titres et avec une barre en dessous */
+    border-bottom: 1px solid #BDBDBD ;
+    padding-bottom: 20px;
+    width: 1200px;
+    margin: 0 auto;
+}
+p{
+    line-height: 20px;
+    color: #777;
+}
 /* SIDEBAR --------------------------------------------- */
-    .sidebar{ /* barre laterale droite qui apparait au click */
+.sidebar{ /* barre laterale droite qui apparait au click */
     position: fixed;
     top: 0;
     right:-300px;
@@ -112,118 +112,107 @@
     background-color: rgba(246, 246, 248, 0.95);
     transition: transform 0.3s;
     transform: translateX(300px);
-	z-index: 100;
-	display:none;
+    z-index: 100;
+    display:none;
     overflow-y: auto;
     overflow-x: hidden;
-    }
-    .sidebar h2{ /* texte dans la barre laterale */
+}
+.sidebar h2{ /* texte dans la barre laterale */
     font-family: 'Antic', sans-serif;
     color: black;
     margin: 15px;
     text-align:center;
-    }
-    .sidebar p{ /* texte dans la barre laterale */
+}
+.sidebar p{ /* texte dans la barre laterale */
     color: black;
     margin: 15px;
     font-size: 13px;
-    }
-    .sidebar img{ 
-     margin: 25px;
-    }
-    .has-sidebar .sidebar{
+}
+.sidebar img{
+    margin: 25px;
+}
+.has-sidebar .sidebar{
     transform: translateX(-300px);
-    }
-    #retour p{ /* bouton retour dans la sidebar */
+}
+#retour p{ /* bouton retour dans la sidebar */
     border: 1px solid;
     border-radius: 4px;
     width: 70px;
     text-align: center;
     margin: 0 auto;
     cursor:  pointer;
-    }
-    #retour p:hover{ 
+}
+#retour p:hover{
     border-color: grey;
     color: grey;
-    }
+}
 /* PREMIERE --------------------------------------------- */
-    #premiere{
-	padding-bottom: 30px;
-	text-align: center;
-	background-color: #E6E6E6;
-    }
-    #ent{ /* PREMEIRE ELEMENT (ENT) */
-	background: url('../doc/img/cate/ent.jpg') no-repeat top center;
-	background-size: 100%;
-    }
-    #pronote{ /* DEUXIEME ELEMENT (PRONOTE) */
-	background: url('../doc/img/cate/pro.jpg') no-repeat top center;
+#premiere{
+    padding-bottom: 30px;
+    text-align: center;
+    background-color: #E6E6E6;
+}
+#ent{ /* PREMEIRE ELEMENT (ENT) */
+    background: url('../doc/img/cate/ent.jpg') no-repeat top center;
     background-size: 100%;
-    }
-    #cnam{
-	background: url('../doc/img/cate/cnam.jpg') no-repeat top center;
+}
+#pronote{ /* DEUXIEME ELEMENT (PRONOTE) */
+    background: url('../doc/img/cate/pro.jpg') no-repeat top center;
     background-size: 100%;
-    }
-    #mood{
-	background: url('../doc/img/cate/mood.jpg') no-repeat top center;
+}
+#cnam{
+    background: url('../doc/img/cate/cnam.jpg') no-repeat top center;
     background-size: 100%;
-    }
-    #sig{
-	background: url('../doc/img/cate/sig.jpg') no-repeat top center;
+}
+#ovh{
+    background: url('../doc/img/cate/ovh.jpg') no-repeat top center;
     background-size: 100%;
-    }
+}
+
 /* DEUXIEME --------------------------------------------- */
 
-    #deuxieme{
+#deuxieme{
     background-color: #D8D8D8;
-	padding-bottom: 30px;
+    padding-bottom: 30px;
     padding-top: 30px;
-	text-align: center;
-    }
-    #git{
-	background: url('../doc/img/cate/gitlab.jpg') no-repeat top center;
+    text-align: center;
+}
+#mood{
+    background: url('../doc/img/cate/mood.jpg') no-repeat top center;
     background-size: 100%;
-    }
-    #slam{
-	background: url('../doc/img/cate/slam.jpg') no-repeat top center;
+}
+#git{
+    background: url('../doc/img/cate/gitlab.jpg') no-repeat top center;
     background-size: 100%;
-    }
-    #ovh{
-	background: url('../doc/img/cate/ovh.jpg') no-repeat top center;
+}
+#slam{
+    background: url('../doc/img/cate/slam.jpg') no-repeat top center;
     background-size: 100%;
-    }
-    #glpi{
-	background: url('../doc/img/cate/glpi.jpg') no-repeat top center;
-    background-size: 100%;
-    }
-    #aff{
-	background: url('../doc/img/cate/aff.jpg') no-repeat top center;
-    background-size: 100%;
-    }
-    #node{
+}
+#node{
     background: url('../doc/img/cate/node.png') no-repeat top center;
     background-size: 100%;
 }
-    #roule{
-	background: url('../doc/img/cate/sio.jpg') no-repeat top center;
+#roule{
+    background: url('../doc/img/cate/sio.jpg') no-repeat top center;
     background-size: 100%;
-    }
-    #mysql{
-	background: url('../doc/img/cate/doc/mysql.jpg') no-repeat top center;
+}
+#mysql{
+    background: url('../doc/img/cate/doc/mysql.jpg') no-repeat top center;
     background-size: 100%;
-    }
-    #javascript{
-	background: url('../doc/img/cate/doc/javasc.jpg') no-repeat top center;
+}
+#javascript{
+    background: url('../doc/img/cate/doc/javasc.jpg') no-repeat top center;
     background-size: 100%;
-    }
-    #php{
-	background: url('../doc/img/cate/doc/php.jpg') no-repeat top center;
+}
+#php{
+    background: url('../doc/img/cate/doc/php.jpg') no-repeat top center;
     background-size: 100%;
-    }
-    #jquery{
-	background: url('../doc/img/cate/doc/jquery.jpg') no-repeat top center;
+}
+#jquery{
+    background: url('../doc/img/cate/doc/jquery.jpg') no-repeat top center;
     background-size: 100%;
-    }
+}
 /* troisieme --------------------------------------------- */
 
 #troisieme{
@@ -249,37 +238,37 @@
 
 /* FOOTER */
 
-    footer{
-	height: 15%;
-	background-color: #444;
-    }
-    footer h1{
-	color: #fff;
-	text-align: center;
-	padding-top: 30px;
-    }
-    .p1
-    {
-	float: left;
-	color: #777;
-    }
-    .p2
-    {
-	float: right;
-	color: #777;
-    }
-                                            /* RESPONSIVE */
+footer{
+    height: 15%;
+    background-color: #444;
+}
+footer h1{
+    color: #fff;
+    text-align: center;
+    padding-top: 30px;
+}
+.p1
+{
+    float: left;
+    color: #777;
+}
+.p2
+{
+    float: right;
+    color: #777;
+}
+/* RESPONSIVE */
 /* < 1097PX --------------------------------------------- */
 
 @media screen and (max-width: 1270px) {
 
     .wrapper{ /* CONTENEUR PERMETTANT DE CENTRER LES ELEMENT*/
-	width: 900px;
+        width: 900px;
     }
     .per{ /* TEXTE EN DESSOUS DES GROS TITRE ET AVEC UNE BARRE */
-	border-bottom: 1px solid #BDBDBD ;
-	padding-bottom: 20px;
-	width: 900px;
+        border-bottom: 1px solid #BDBDBD ;
+        padding-bottom: 20px;
+        width: 900px;
     }
 }
 
@@ -287,27 +276,27 @@
 
 @media screen and (max-width: 915px) {
     h1{
-      font-size: 30px; 
+        font-size: 30px;
     }
     .wrapper{ /* CONTENEUR PERMETTANT DE CENTRER LES ELEMENT*/
-	width: 600px;
+        width: 600px;
     }
     .per{ /* TEXTE EN DESSOUS DES GROS TITRE ET AVEC UNE BARRE */
-	border-bottom: 1px solid #BDBDBD ;
-	padding-bottom: 20px;
-	width: 600px;
+        border-bottom: 1px solid #BDBDBD ;
+        padding-bottom: 20px;
+        width: 600px;
     }
     p{
-	font-size: 13px;
+        font-size: 13px;
     }
     .sidebar h2{ /* texte dans la barre laterale */
-    margin: 15px;
-	
+        margin: 15px;
+
     }
     .sidebar p{ /* texte dans la barre laterale */
-    color: black;
-    margin: 15px;
-    font-size: 11px;
+        color: black;
+        margin: 15px;
+        font-size: 11px;
     }
 }
 
@@ -316,15 +305,15 @@
 @media screen and (max-width: 625px) {
 
     .wrapper{ /* CONTENEUR PERMETTANT DE CENTRER LES ELEMENT*/
-	width: 480px;
+        width: 480px;
     }
     .per{ /* TEXTE EN DESSOUS DES GROS TITRE ET AVEC UNE BARRE */
-	border-bottom: 1px solid #BDBDBD ;
-	padding-bottom: 20px;
-	width: 410px;
+        border-bottom: 1px solid #BDBDBD ;
+        padding-bottom: 20px;
+        width: 410px;
     }
     p{
-	font-size: 13px;
+        font-size: 13px;
     }
 }
 
@@ -333,23 +322,23 @@
 @media screen and (max-width: 500px) {
 
     .wrapper{ /* CONTENEUR PERMETTANT DE CENTRER LES ELEMENTS*/
-	width: 320px;
+        width: 320px;
     }
     .per{ /* TEXTE EN DESSOUS DES GROS TITRE ET AVEC UNE BARRE */
-	border-bottom: 1px solid #BDBDBD ;
-	padding-bottom: 10px;
-	width: 200px;
+        border-bottom: 1px solid #BDBDBD ;
+        padding-bottom: 10px;
+        width: 200px;
     }
     .p1, .p2{
-	float: none;
+        float: none;
     }
     p{
-	font-size: 13px;
+        font-size: 13px;
     }
     .overlay p{
-    display:block;
+        display:block;
     }
     #mongei{
-    display:none;
+        display:none;
     }
 }
