@@ -1,10 +1,11 @@
 $(document).ready(function(){
 
-    $(".rond").hover(function(){
-        $(this).stop().animate({width: '225px' },200).css({'z-index' : '10'});
+    $(".item",this).hover(function(){
+        $(".rond", this).animate({right : 0});
     }, function () {
-        $(this).stop().animate({width: '17px', height: '17px' }, 200).css({'z-index' : '1'});
-    });​
+        $(".rond", this).animate({left : 0});
+
+    });
 
 		
 });

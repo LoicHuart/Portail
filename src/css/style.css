@@ -163,13 +163,13 @@ p{
 }
 /* PREMIERE --------------------------------------------- */
 #premiere{
-    padding-bottom: 30px;
+    padding-bottom: 15px;
     text-align: center;
     background-color: #E6E6E6;
 }
 #ent{ /* PREMEIRE ELEMENT (ENT) */
     background: url('../doc/img/cate/ent3.jpg') no-repeat top center;
-    background-size: 100%;*/
+    background-size: 100%;
 }
 #pronote{ /* DEUXIEME ELEMENT (PRONOTE) */
     background: url('../doc/img/cate/pro.jpg') no-repeat top center;
@@ -210,7 +210,7 @@ p{
     background-size: 100%;
 }
 #roule{
-    background: url('../doc/img/cate/sio.jpg') no-repeat top center;
+    background: url('../doc/img/cate/roule.jpg') no-repeat top center;
     background-size: 100%;
 }
 #mysql{
@@ -247,6 +247,30 @@ p{
 }
 #sig{
     background: url('../doc/img/cate/sig.jpg') no-repeat top center;
+    background-size: 100%;
+}
+/* queatrieme --------------------------------------------- */
+
+#quatrieme{
+    background-color: #D8D8D8;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    text-align: center;
+}
+#mysql{
+    background: url('../doc/img/cate/doc/mysql.jpg') no-repeat top center;
+    background-size: 100%;
+}
+#javascript{
+    background: url('../doc/img/cate/doc/javasc.jpg') no-repeat top center;
+    background-size: 100%;
+}
+#php{
+    background: url('../doc/img/cate/doc/php.jpg') no-repeat top center;
+    background-size: 100%;
+}
+#jquery{
+    background: url('../doc/img/cate/doc/jquery.jpg') no-repeat top center;
     background-size: 100%;
 }
 
