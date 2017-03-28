@@ -55,15 +55,25 @@ ul{
 
 /* CAROUSELS DU SITE */
 
-.item{ /* element du carousel */
+.item { /* element du carousel */
+    position: relative;
     width: 200px;
     border: 1px solid #A4A4A4;
     height: 50px;
-    display:inline-block;
+    display: inline-block;
     margin-top: 10px;
     vertical-align: middle;
 }
+
+.rond {
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    background-color: white;
+}
+
 .item:hover{ /* QUAND L'UTILISATEUR PASSE LA SOURIS SUR LES ELEMENTS  */
+
 
 }
 .item  h4{
@@ -159,7 +169,7 @@ p{
 }
 #ent{ /* PREMEIRE ELEMENT (ENT) */
     background: url('../doc/img/cate/ent3.jpg') no-repeat top center;
-    background-size: 100%;
+    background-size: 100%;*/
 }
 #pronote{ /* DEUXIEME ELEMENT (PRONOTE) */
     background: url('../doc/img/cate/pro.jpg') no-repeat top center;
