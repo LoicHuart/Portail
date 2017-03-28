@@ -65,7 +65,7 @@ ul{
 .item { /* element du carousel */
     position: relative;
     width: 200px;
-    height: 50px;
+    height: 120px;
     display: inline-block;
     margin-top: 10px;
     vertical-align: middle;
@@ -89,6 +89,7 @@ ul{
 
 }
 .item  h4{
+    padding-top: 75px;
     text-align: center;
     margin-top: 11px;
     color: white;
@@ -179,19 +180,19 @@ p{
     padding-bottom: 20px;
 }
 #ent{ /* PREMEIRE ELEMENT (ENT) */
-    background: url('../doc/img/cate/ent3.jpg') no-repeat top center;
+    background: url('../doc/img/cate/ent.png') no-repeat top center;
     background-size: 100%;
 }
 #pronote{ /* DEUXIEME ELEMENT (PRONOTE) */
-    background: url('../doc/img/cate/pro.jpg') no-repeat top center;
+    background: url('../doc/img/cate/pro.png') no-repeat top center;
     background-size: 100%;
 }
 #cnam{
-    background: url('../doc/img/cate/cnam.jpg') no-repeat top center;
+    background: url('../doc/img/cate/cnam.png') no-repeat top center;
     background-size: 100%;
 }
 #ovh{
-    background: url('../doc/img/cate/ovh.jpg') no-repeat top center;
+    background: url('../doc/img/cate/ovh.png') no-repeat top center;
     background-size: 100%;
 }
 
@@ -203,15 +204,15 @@ p{
     padding-bottom: 20px;
 }
 #mood{
-    background: url('../doc/img/cate/mood.jpg') no-repeat top center;
+    background: url('../doc/img/cate/mood.png') no-repeat top center;
     background-size: 100%;
 }
 #git{
-    background: url('../doc/img/cate/gitlab.jpg') no-repeat top center;
+    background: url('../doc/img/cate/git.png') no-repeat top center;
     background-size: 100%;
 }
 #slam{
-    background: url('../doc/img/cate/slam.jpg') no-repeat top center;
+    background: url('../doc/img/cate/slam.png') no-repeat top center;
     background-size: 100%;
 }
 #node{
@@ -219,25 +220,10 @@ p{
     background-size: 100%;
 }
 #roule{
-    background: url('../doc/img/cate/roule.jpg') no-repeat top center;
+    background: url('../doc/img/cate/roule.png') no-repeat top center;
     background-size: 100%;
 }
-#mysql{
-    background: url('../doc/img/cate/doc/mysql.jpg') no-repeat top center;
-    background-size: 100%;
-}
-#javascript{
-    background: url('../doc/img/cate/doc/javasc.jpg') no-repeat top center;
-    background-size: 100%;
-}
-#php{
-    background: url('../doc/img/cate/doc/php.jpg') no-repeat top center;
-    background-size: 100%;
-}
-#jquery{
-    background: url('../doc/img/cate/doc/jquery.jpg') no-repeat top center;
-    background-size: 100%;
-}
+
 /* troisieme --------------------------------------------- */
 
 #troisieme{
@@ -246,15 +232,15 @@ p{
         text-align: center;
 }
 #glpi{
-    background: url('../doc/img/cate/glpi.jpg') no-repeat top center;
+    background: url('../doc/img/cate/glpi.png') no-repeat top center;
     background-size: 100%;
 }
 #aff{
-    background: url('../doc/img/cate/aff.jpg') no-repeat top center;
+    background: url('../doc/img/cate/aff.png') no-repeat top center;
     background-size: 100%;
 }
 #sig{
-    background: url('../doc/img/cate/sig.jpg') no-repeat top center;
+    background: url('../doc/img/cate/sig.png') no-repeat top center;
     background-size: 100%;
 }
 /* queatrieme --------------------------------------------- */
