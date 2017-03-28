@@ -107,7 +107,7 @@ header{ /* BARRE BLANCHE DE DEBUT */
     padding-top: 11px;
 }
 .per{ /* texte en dessous des gros titres et avec une barre en dessous */
-
+    border-bottom: 1px solid #BDBDBD ;
     padding-bottom: 20px;
     width: 1200px;
     margin: 0 auto;
