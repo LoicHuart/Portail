@@ -243,30 +243,6 @@ p{
     background: url('../doc/img/cate/sig.png') no-repeat top center;
     background-size: 100%;
 }
-/* queatrieme --------------------------------------------- */
-
-#quatrieme{
-
-    padding-bottom: 30px;
-
-    text-align: center;
-}
-#mysql{
-    background: url('../doc/img/cate/doc/mysql.jpg') no-repeat top center;
-    background-size: 100%;
-}
-#javascript{
-    background: url('../doc/img/cate/doc/javasc.jpg') no-repeat top center;
-    background-size: 100%;
-}
-#php{
-    background: url('../doc/img/cate/doc/php.jpg') no-repeat top center;
-    background-size: 100%;
-}
-#jquery{
-    background: url('../doc/img/cate/doc/jquery.jpg') no-repeat top center;
-    background-size: 100%;
-}
 
 
 /* FOOTER */
