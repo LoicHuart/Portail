@@ -25,7 +25,7 @@ body{
     clear: both;
 }
 h1{
-    padding-top: 22px;
+    padding-top: 11px;
     font-family: 'Antic', sans-serif;
     font-size: 45px;
     color: white;
@@ -73,17 +73,6 @@ ul{
 
 }
 
-.rond {
-    position: absolute;
-    left: 0px;
-    top: 0px;
-    height: 150px;
-    width: 0%;
-    background-color: white;
-
-
-}
-
 .item:hover{ /* QUAND L'UTILISATEUR PASSE LA SOURIS SUR LES ELEMENTS  */
 
 
@@ -106,7 +95,7 @@ ul{
 /* HEADER --------------------------------------------- */
 
 header{ /* BARRE BLANCHE DE DEBUT */
-    height : 90px;
+    height : 70px;
     background-color: #141414;
 }
 .MainTitle{  /* titre principale du site (en haut a gauche) */
@@ -115,7 +104,7 @@ header{ /* BARRE BLANCHE DE DEBUT */
 }
 #menu{ /* icone en haut a droite (3 petites barres) */
     float:right;
-    padding-top: 22px;
+    padding-top: 11px;
 }
 .per{ /* texte en dessous des gros titres et avec une barre en dessous */
 
