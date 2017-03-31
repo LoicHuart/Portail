@@ -19,7 +19,6 @@ body{
 .wrapper{ /* conteneur permettant de centrer les elements */
     width: 1200px;
     margin: 0 auto;
-
 }
 .clear{
     clear: both;
@@ -33,26 +32,14 @@ h1{
 h4{
     color: #444;
     font-size: 18px;
-
 }
 h2{
     padding-top: 22px;
     font-family: 'Antic', sans-serif;
     font-size: 30px;
 
+}
 
-}
-.overlay{ /* truc blanc transparent derriere le titre de chaque element */
-    background: rgba(255,255,255, 0.90);
-    height: 80px;
-    width: 100%;
-    box-sizing: border-box;
-    padding: 20px 5px 0 5px;
-    margin-top: 40px;
-}
-.overlay p{ /* petit texte dans chaque element (le jquery le fait apparaitre au passage de la souris) */
-    display: none;
-}
 a{
     text-decoration: none;
 }
@@ -70,10 +57,12 @@ ul{
     margin-top: 20px;
     vertical-align: middle;
     overflow: hidden;
+    border-radius: 10px;
+
 }
 
-.item:hover{ /* QUAND L'UTILISATEUR PASSE LA SOURIS SUR LES ELEMENTS  */
 
+.item:hover{ /* QUAND L'UTILISATEUR PASSE LA SOURIS SUR LES ELEMENTS  */
 
 }
 .item  h4{
@@ -85,28 +74,22 @@ ul{
     text-transform: uppercase;
     font-family: Antic;
 }
-.item p{
-    text-align: center;
-    font-size: 12px;
 
-
-}
 /* HEADER --------------------------------------------- */
 
 header{ /* BARRE BLANCHE DE DEBUT */
     height : 70px;
-    background-color: #141414;
+    background-color: #424242;
 }
 .MainTitle{  /* titre principale du site (en haut a gauche) */
     float: left;
-
 }
 #menu{ /* icone en haut a droite (3 petites barres) */
     float:right;
     padding-top: 11px;
 }
 .per{ /* texte en dessous des gros titres et avec une barre en dessous */
-    border-bottom: 1px solid #BDBDBD ;
+
     padding-bottom: 20px;
     width: 1200px;
     font-size: 17px;
@@ -117,7 +100,6 @@ p{
 }
 /* SIDEBAR --------------------------------------------- */
 
-
 .sidebar{ /* barre laterale droite qui apparait au click */
     position: fixed;
     top: 0;
@@ -125,7 +107,7 @@ p{
     bottom: 0;
     min-height: 100%;
     width: 100%;
-    background-color: rgba(20, 20, 20, 1);
+    background-color: #424242;
     z-index: 100;
     display:none;
     overflow-y: auto;
@@ -145,8 +127,7 @@ p{
 }
 #mongei{
     margin: 0 auto;
-
-    display : block;
+    display: block;
 }
 .has-sidebar .sidebar{
 
@@ -159,8 +140,6 @@ p{
 }
 /* banniere --------------------------------------------- */
 #banner{
-
-
     padding-top: 20px;
     background-color: #E6E6E6;
 }
@@ -285,9 +264,7 @@ footer h1{
 /* < 915PX --------------------------------------------- */
 
 @media screen and (max-width: 990px) {
-    h1{
-        font-size: 30px;
-    }
+
     .wrapper{ /* CONTENEUR PERMETTANT DE CENTRER LES ELEMENT*/
         width: 600px;
     }
@@ -325,7 +302,7 @@ footer h1{
         width: 480px;
     }
     .per{ /* TEXTE EN DESSOUS DES GROS TITRE ET AVEC UNE BARRE */
-
+        border: none;
         padding-bottom: 20px;
         width: 410px;
     }
@@ -342,7 +319,6 @@ footer h1{
         width: 320px;
     }
     .per{ /* TEXTE EN DESSOUS DES GROS TITRE ET AVEC UNE BARRE */
-
         padding-bottom: 10px;
         width: 200px;
     }
