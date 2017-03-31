@@ -14,7 +14,7 @@ body{
     font-size: 15px;
     position: relative;
     overflow-x: hidden;
-    background-color: #F2F2F2;
+    background-color: #E6E6E6;
 }
 .wrapper{ /* conteneur permettant de centrer les elements */
     width: 1200px;
@@ -38,7 +38,7 @@ h4{
 h2{
     padding-top: 22px;
     font-family: 'Antic', sans-serif;
-    font-size: 45px;
+    font-size: 30px;
 
 
 }
@@ -67,9 +67,12 @@ ul{
     width: 200px;
     height: 120px;
     display: inline-block;
-    margin-top: 10px;
+    margin-top: 20px;
     vertical-align: middle;
     overflow: hidden;
+    -webkit-border-radius:10px;
+    -moz-border-radius:10px;
+    border-radius:10px;
 
 }
 
@@ -110,8 +113,7 @@ header{ /* BARRE BLANCHE DE DEBUT */
     border-bottom: 1px solid #BDBDBD ;
     padding-bottom: 20px;
     width: 1200px;
-    margin: 0 auto;
-    text-align: center;
+    font-size: 17px;
 }
 p{
     line-height: 20px;
@@ -124,7 +126,7 @@ p{
     right:-300px;
     bottom: 0;
     min-height: 100%;
-    width: 300px;
+    width: 100%;
     background-color: rgba(20, 20, 20, 1);
     transition: transform 0.3s;
     transform: translateX(300px);
@@ -143,9 +145,10 @@ p{
     color: white;
     margin: 15px;
     font-size: 13px;
+    text-align: center;
 }
 .sidebar img{
-    margin: 25px;
+    margin: 0 auto;
 }
 .has-sidebar .sidebar{
     transform: translateX(-300px);
@@ -163,10 +166,19 @@ p{
     border-color: grey;
     color: grey;
 }
+/* banniere --------------------------------------------- */
+#banner{
+
+
+    padding-top: 20px;
+    background-color: #E6E6E6;
+}
+
 /* PREMIERE --------------------------------------------- */
 #premiere{
     text-align: center;
-    padding-bottom: 20px;
+    padding: 20px;
+    background-color: #F2F2F2;
 }
 #ent{ /* PREMEIRE ELEMENT (ENT) */
     background: url('../doc/img/cate/ent.png') no-repeat top center;
@@ -190,7 +202,8 @@ p{
 #deuxieme{
 
     text-align: center;
-    padding-bottom: 20px;
+    padding: 40px;
+    background-color: #E6E6E6;
 }
 #mood{
     background: url('../doc/img/cate/mood.png') no-repeat top center;
@@ -217,8 +230,10 @@ p{
 
 #troisieme{
 
-    padding-bottom: 20px;
-        text-align: center;
+    padding: 40px;
+    text-align: center;
+    background-color: #F2F2F2;
+
 }
 #glpi{
     background: url('../doc/img/cate/glpi.png') no-repeat top center;
@@ -258,8 +273,10 @@ footer h1{
 /* RESPONSIVE */
 /* < 1097PX --------------------------------------------- */
 
-@media screen and (max-width: 1270px) {
-
+@media screen and (max-width: 1290px) {
+    .item{
+        width: 170px;
+    }
     .wrapper{ /* CONTENEUR PERMETTANT DE CENTRER LES ELEMENT*/
         width: 900px;
     }
@@ -268,11 +285,15 @@ footer h1{
         padding-bottom: 20px;
         width: 900px;
     }
+    .item  h4{
+        padding-top: 60px;
+
+    }
 }
 
 /* < 915PX --------------------------------------------- */
 
-@media screen and (max-width: 915px) {
+@media screen and (max-width: 990px) {
     h1{
         font-size: 30px;
     }
@@ -292,15 +313,22 @@ footer h1{
 
     }
     .sidebar p{ /* texte dans la barre laterale */
-        color: black;
+
         margin: 15px;
         font-size: 11px;
+    }
+    .item  h4{
+        padding-top: 75px;
+
+    }
+    .item{
+        width: 200px;
     }
 }
 
 /* < 625PX --------------------------------------------- */
 
-@media screen and (max-width: 625px) {
+@media screen and (max-width: 665px) {
 
     .wrapper{ /* CONTENEUR PERMETTANT DE CENTRER LES ELEMENT*/
         width: 480px;
@@ -317,7 +345,7 @@ footer h1{
 
 /* < 500PX --------------------------------------------- */
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 570px) {
 
     .wrapper{ /* CONTENEUR PERMETTANT DE CENTRER LES ELEMENTS*/
         width: 320px;
