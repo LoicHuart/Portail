@@ -70,10 +70,6 @@ ul{
     margin-top: 20px;
     vertical-align: middle;
     overflow: hidden;
-    -webkit-border-radius:10px;
-    -moz-border-radius:10px;
-    border-radius:10px;
-
 }
 
 .item:hover{ /* QUAND L'UTILISATEUR PASSE LA SOURIS SUR LES ELEMENTS  */
@@ -120,16 +116,16 @@ p{
     color: #777;
 }
 /* SIDEBAR --------------------------------------------- */
+
+
 .sidebar{ /* barre laterale droite qui apparait au click */
     position: fixed;
     top: 0;
-    right:-300px;
+    right: 0;
     bottom: 0;
     min-height: 100%;
     width: 100%;
     background-color: rgba(20, 20, 20, 1);
-    transition: transform 0.3s;
-    transform: translateX(300px);
     z-index: 100;
     display:none;
     overflow-y: auto;
@@ -147,24 +143,19 @@ p{
     font-size: 13px;
     text-align: center;
 }
-.sidebar img{
+#mongei{
     margin: 0 auto;
+
+    display : block;
 }
 .has-sidebar .sidebar{
-    transform: translateX(-300px);
-}
-#retour p{ /* bouton retour dans la sidebar */
-    border: 1px solid;
-    border-radius: 4px;
-    width: 70px;
-    text-align: center;
-    margin: 0 auto;
-    cursor:  pointer;
 
 }
-#retour p:hover{
-    border-color: grey;
-    color: grey;
+#retour{ /* bouton retour dans la sidebar */
+    display : block;
+    margin: 10px auto;
+    cursor:  pointer;
+    width: 50px;
 }
 /* banniere --------------------------------------------- */
 #banner{
@@ -334,7 +325,7 @@ footer h1{
         width: 480px;
     }
     .per{ /* TEXTE EN DESSOUS DES GROS TITRE ET AVEC UNE BARRE */
-        border-bottom: 1px solid #BDBDBD ;
+
         padding-bottom: 20px;
         width: 410px;
     }
@@ -351,7 +342,7 @@ footer h1{
         width: 320px;
     }
     .per{ /* TEXTE EN DESSOUS DES GROS TITRE ET AVEC UNE BARRE */
-        border-bottom: 1px solid #BDBDBD ;
+
         padding-bottom: 10px;
         width: 200px;
     }
