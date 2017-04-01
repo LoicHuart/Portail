@@ -1,6 +1,6 @@
-let siderbarOpened = false;
-let button = document.querySelector('#menu');
-let retour = document.querySelector('#retour');
+var siderbarOpened = false;
+var button = document.querySelector('#menu');
+var retour = document.querySelector('#retour');
 
 button.addEventListener('click', function(e){
     e.stopPropagation();

@@ -4,7 +4,7 @@ $(document).ready(function(){
     var iWindowsSize = $(window).width();
     if (iWindowsSize >=500 ){  // SI LA TAILLE DE LA FENETRE EST SUPERIEUR A 500PX, TU EXECUTE CES SCRIPT (version PC/Tablette)
 
-        $( "#pronote" ).hover(function() {
+        $( "#pronote, #aff" ).hover(function() {
             $( "header" ).stop().animate({ backgroundColor: "#1abc9c" }, 500 );
             $( "#lycee" ).stop().animate({ color: "#1abc9c" }, 500 );
         },function() {

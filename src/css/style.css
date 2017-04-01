@@ -37,7 +37,6 @@ h2{
     padding-top: 22px;
     font-family: 'Antic', sans-serif;
     font-size: 30px;
-
 }
 
 a{
@@ -57,8 +56,6 @@ ul{
     margin-top: 20px;
     vertical-align: middle;
     overflow: hidden;
-    border-radius: 10px;
-
 }
 
 
@@ -122,7 +119,7 @@ p{
 .sidebar p{ /* texte dans la barre laterale */
     color: white;
     margin: 15px;
-    font-size: 13px;
+    font-size: 16px;
     text-align: center;
 }
 #mongei{
@@ -140,7 +137,6 @@ p{
 }
 /* banniere --------------------------------------------- */
 #banner{
-    padding-top: 20px;
     background-color: #E6E6E6;
 }
 
@@ -172,7 +168,7 @@ p{
 #deuxieme{
 
     text-align: center;
-    padding: 40px;
+    padding: 20px;
     background-color: #E6E6E6;
 }
 #mood{
@@ -200,7 +196,7 @@ p{
 
 #troisieme{
 
-    padding: 40px;
+    padding: 20px;
     text-align: center;
     background-color: #F2F2F2;
 
@@ -219,27 +215,6 @@ p{
 }
 
 
-/* FOOTER */
-
-footer{
-    height: 15%;
-    background-color: #444;
-}
-footer h1{
-    color: #fff;
-    text-align: center;
-    padding-top: 30px;
-}
-.p1
-{
-    float: left;
-    color: #777;
-}
-.p2
-{
-    float: right;
-    color: #777;
-}
 /* RESPONSIVE */
 /* < 1097PX --------------------------------------------- */
 
@@ -251,13 +226,10 @@ footer h1{
         width: 900px;
     }
     .per{ /* TEXTE EN DESSOUS DES GROS TITRE ET AVEC UNE BARRE */
-        border-bottom: 1px solid #BDBDBD ;
-        padding-bottom: 20px;
         width: 900px;
     }
     .item  h4{
         padding-top: 60px;
-
     }
 }
 
@@ -269,7 +241,7 @@ footer h1{
         width: 600px;
     }
     .per{ /* TEXTE EN DESSOUS DES GROS TITRE ET AVEC UNE BARRE */
-        border-bottom: 1px solid #BDBDBD ;
+        border: none;
         padding-bottom: 20px;
         width: 600px;
     }
@@ -315,6 +287,13 @@ footer h1{
 
 @media screen and (max-width: 570px) {
 
+    .item { /* element du carousel */
+        width: 150px;
+    }
+    .item h4{ /* element du carousel */
+        padding-top: 50px;
+        font-size: 22px;
+    }
     .wrapper{ /* CONTENEUR PERMETTANT DE CENTRER LES ELEMENTS*/
         width: 320px;
     }
