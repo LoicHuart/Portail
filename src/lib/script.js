@@ -1,5 +1,11 @@
 $(document).ready(function(){
 
+    setTimeout(function(){
+        $(".section").fadeOut(200, function() {
+            $("#content").fadeIn(200);
+        });
+    }, 1000);
+
 
     var iWindowsSize = $(window).width();
     if (iWindowsSize >=500 ){  // SI LA TAILLE DE LA FENETRE EST SUPERIEUR A 500PX, TU EXECUTE CES SCRIPT (version PC/Tablette)
