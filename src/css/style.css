@@ -24,8 +24,8 @@ body{
     clear: both;
 }
 h1{
-    padding-top: 11px;
-    font-family: 'Antic', sans-serif;
+    padding-top: 12px;
+    font-family: 'julius sans one', sans-serif;
     font-size: 45px;
     color: white;
 }
@@ -63,13 +63,13 @@ ul{
 
 }
 .item  h4{
-    padding-top: 75px;
+    padding-top: 77px;
     text-align: center;
     margin-top: 11px;
     color: white;
     font-size: 25px;
     text-transform: uppercase;
-    font-family: Antic;
+    font-family: 'julius sans one';
 }
 
 /* HEADER --------------------------------------------- */
@@ -229,7 +229,7 @@ p{
         width: 900px;
     }
     .item  h4{
-        padding-top: 60px;
+        padding-top: 62px;
     }
 }
 
@@ -258,7 +258,7 @@ p{
         font-size: 11px;
     }
     .item  h4{
-        padding-top: 75px;
+        padding-top: 77px;
 
     }
     .item{
@@ -291,8 +291,8 @@ p{
         width: 150px;
     }
     .item h4{ /* element du carousel */
-        padding-top: 50px;
-        font-size: 22px;
+        padding-top: 55px;
+        font-size: 20px;
     }
     .wrapper{ /* CONTENEUR PERMETTANT DE CENTRER LES ELEMENTS*/
         width: 320px;
