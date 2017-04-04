@@ -4,22 +4,31 @@
 	<meta charset="UTF-8">
     <link rel="stylesheet" href="css/style.css">
 	<meta name="viewport" content="width=device-width" />
-	<link href="https://fonts.googleapis.com/css?family=Antic|Julius+Sans+One" rel="stylesheet">
-<!-- Carousel -->
-    <link rel="stylesheet" href="css/owl.carousel.css">
-    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Antic|Julius+Sans+One|" rel="stylesheet">
 	<title>PORTAIL</title>
 </head>
 <body>
+
+
+    <section class="section">
+        <div class="center-v" >
+            <span class="loader-quart"> </span>
+            <span class="chargement">CHARGEMENT...</span>
+        </div>
+    </section>
+
+
+<div id="content">
 	<header>
         <div class="wrapper">
             <a href="index.html"><h1 class='MainTitle'>PORTAIL</h1></a>
-            <img id='menu' src='doc/img/menu.png' width='50px' height='50px' >
+            <img id='menu' src='doc/img/menu.png'  >
             <div class='clear'></div> 
         </div>
     </header>
 
     <div class='sidebar'>
+        <img id='retour' src='doc/img/back.png' >
         <h2>LYCEE MONGE</h2>
         <img src='doc/img/monge.png'  id='mongei'>
         <p>
@@ -35,68 +44,56 @@
             <strong>ce.0080027l@ac-reims.fr</strong><br/>
         </p>
         <p>
-            <strong>Tél</strong>.  03 24 52 69 69 - </strong>Fax.<strong>  03 24 52 69 78</strong><br/>
+            <strong>Tél</strong>.  03 24 52 69 69 - <strong>Fax. 03 24 52 69 78</strong><br/>
             <strong>Horaires</strong> : ouverture du lundi au vendredi<br/>
             de 07h30 à 12h00 et de 13h00 à 18h00<br/>
         </p>
-        <div id='retour'><p>RETOUR</p></div>
+
     </div>
 
-    <section id="premiere">
-        <div class="wrapper">     
-            <h1>LYCEE MONGE</h1>
-            <p class='per'>Services élèves</p>
-            <div class="non owl-carousel owl-theme">
-                <a href="https://www.ent-lycees.fr/"><div class='item' id='ent'><div class='overlay'><h4>ENT</h4><p>Connexion à l'espace numerique de travail.</p> </div></div></a>
 
-                <a href="http://pronote.lyceemonge.eu/"><div class='item' id='pronote'><div class='overlay'><h4>Pronote</h4><p>Connexion à pronote.</p> </div></div></a>
-                
-                <a href="https://lecnam.net/ "><div class='item' id='cnam'><div class='overlay'><h4>CNAM</h4><p>Connexion au site du CNAM.</p></div></div></a>
-                
-                <a href="http://ovh.infomonge.net/"><div class='item' id='ovh'><div class='overlay'><h4>SIO OVH</h4><p>Connexion au SIO OVH.</p></div></div></a>
-            </div>
+    <section id="banner">
+        <div class="wrapper">
+            <h2 id="lycee">LYCEE MONGE</h2>
+            <p class='per'>Services élèves</p>
         </div>
     </section>
+
+    <section id="premiere">
+        <div class="wrapper">
+                <a href="https://www.ent-lycees.fr/"><div class='item' id='ent'><h4>ENT</h4></div></a>
+                <a href="http://pronote.lyceemonge.eu/"><div class='item' id='pronote'><h4>Pronote</h4> </div></a>
+                <a href="https://lecnam.net/ "><div class='item' id='cnam'><h4>CNAM</h4></div></a>
+                <a href="http://ovh.infomonge.net/"><div class='item' id='ovh'><h4>SIO OVH</h4></div></a>
+        </div>
+    </section>
+
     <section id="deuxieme">
         <div class="wrapper">
-            <p class='per'>Services ESXI</p>
-            <div class="non owl-carousel owl-theme">
-                <a href="https://portail.infomonge.net/moodle"><div class='item' id='mood'><div class='overlay'><h4>Moodle</h4><p>Connexion à Moodle.</p> </div></div></a>
-
-                <a href="https://portail.infomonge.net/gitlab"><div class='item' id='git'><div class='overlay'><h4>GitLab</h4><p>Connexion à Gitlab.</p> </div></div></a>
-
-                <a href="https://portail.infomonge.net/slam"><div class='item' id='slam'><div class='overlay'><h4>SLAM</h4> <p>Connexion au serveur slam.</p> </div></div></a>
-
-                <a href="https://portail.infomonge.net/node"><div class='item' id='slam'><div class='overlay'><h4>NODE</h4> <p>Connexion au serveur node.</p> </div></div></a>
-
-                <a href="https://portail.infomonge.net/ROULETTE"><div class='item' id='roule'><div class='overlay'><h4>ROULETTE</h4><p>Accès à SIO ROULETTE.</p></div></div></a>
-            </div>       
+            <a href="https://portail.infomonge.net/gitlab"><div class='item' id='git'><h4>GitLab</h4></div></a>
+            <a href="https://portail.infomonge.net/moodle">    <div class='item' id='mood'><h4>Moodle</h4></div></a>
+            <a href="https://portail.infomonge.net/slam"><div class='item' id='slam'><h4>SLAM</h4></div></a>
+            <a href="https://portail.infomonge.net/node"><div class='item' id='node'><h4>NODE</h4></div></a>
+            <a href="https://portail.infomonge.net/ROULETTE"><div class='item' id='roule'><h4>ROULETTE</h4></div></a>
         </div>
     </section>
-    <section id="premiere">
+
+    <section id="troisieme">
         <div class="wrapper">
-            <p class='per'>Services MONGE</p>
-            <div class="non owl-carousel owl-theme">
-                <a href="http://affichage.lyceemonge.lan"><div class='item' id='aff'><div class='overlay'><h4>AFFICHAGE</h4><p>Acces au pannel AFFICHAGE.</p> </div></div></a>
-                
-                <a href="http://sig.infomonge.net" ><div class='item' id='sig'><div class='overlay'><h4>SIG</h4> <p>Connexion au STMG SIG.</p> </div></div></a>
 
-                <a href="http://glpi.infomonge.net"><div class='item' id='glpi'><div class='overlay'><h4>GLPI</h4><p>Acces a GLPI.</p></div></div></a>
-            </div>       
+
+            <a href="http://affichage.lyceemonge.lan"><div class='item' id='aff'><h4>AFFICHAGE</h4></div></a>
+            <a href="http://sig.infomonge.net"><div class='item' id='sig'><h4>SIG</h4> </div></a>
+            <a href="http://glpi.infomonge.net"><div class='item' id='glpi'><h4>GLPI</h4></div></a>
         </div>
     </section>
-    <footer>
-        <div class="wrapper"> 
-              <h1>INFOMONGE</h1>
-              <p><span class='p1'>Copyright © 2017. Tous droits réservés.</span><span class='p2'>Mise a jour: 23/03/2017</span></p>
-              <div class='clear'></div>
-        </div>
-    </footer>
+
+</div>
 
 <!-- Add libraries -->
 	<script type="text/javascript" src="lib/jquery-3.1.1.js" ></script>
-    <script type="text/javascript" src="lib/owl.carousel.min.js"></script>
   	<script type="text/javascript" src="lib/script.js" ></script>
+    <script type="text/javascript" src="lib/jquery.color.js" ></script>
     <script type="text/javascript" src="lib/sidebar.js" ></script>
 </body>
 </html>

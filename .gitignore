@@ -1,3 +1,4 @@
 # Exclude everything in the folder except .template
 app/config/*
 !app/config/*.template
+.idea

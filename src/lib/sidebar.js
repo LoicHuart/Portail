@@ -1,5 +1,5 @@
-let siderbarOpened = false;
-let button = document.querySelector('#menu');
+var siderbarOpened = false;
+var button = document.querySelector('#menu');
 var retour = document.querySelector('#retour');
 
 button.addEventListener('click', function(e){
@@ -14,7 +14,7 @@ button.addEventListener('click', function(e){
 	$('.sidebar').fadeOut(200);
 	siderbarOpened = false;
 	}
-})
+});
 
 document.body.addEventListener('click', function () {
     if (siderbarOpened){
@@ -22,7 +22,7 @@ document.body.addEventListener('click', function () {
 		$('.sidebar').fadeOut(200);
         siderbarOpened = false;
     }
-})
+});
 
 retour.addEventListener('click', function(){
 	if(siderbarOpened){
@@ -30,4 +30,4 @@ retour.addEventListener('click', function(){
 	$('.sidebar').fadeOut(200);
 	siderbarOpened = false;
 	}
-})
+});
