@@ -199,19 +199,19 @@ p{
     background-color: #F2F2F2;
 }
 #ent{ /* PREMEIRE ELEMENT (ENT) */
-    background: url('../doc/img/cate/ent.png') no-repeat top center;
+    background: url('img/cate/ent.png') no-repeat top center;
     background-size: 100%;
 }
 #pronote{ /* DEUXIEME ELEMENT (PRONOTE) */
-    background: url('../doc/img/cate/pro.png') no-repeat top center;
+    background: url('img/cate/pro.png') no-repeat top center;
     background-size: 100%;
 }
 #cnam{
-    background: url('../doc/img/cate/cnam.png') no-repeat top center;
+    background: url('img/cate/cnam.png') no-repeat top center;
     background-size: 100%;
 }
 #ovh{
-    background: url('../doc/img/cate/ovh.png') no-repeat top center;
+    background: url('img/cate/ovh.png') no-repeat top center;
     background-size: 100%;
 }
 
@@ -224,23 +224,23 @@ p{
     background-color: #E6E6E6;
 }
 #mood{
-    background: url('../doc/img/cate/mood.png') no-repeat top center;
+    background: url('img/cate/mood.png') no-repeat top center;
     background-size: 100%;
 }
 #git{
-    background: url('../doc/img/cate/git.png') no-repeat top center;
+    background: url('img/cate/git.png') no-repeat top center;
     background-size: 100%;
 }
 #slam{
-    background: url('../doc/img/cate/slam.png') no-repeat top center;
+    background: url('img/cate/slam.png') no-repeat top center;
     background-size: 100%;
 }
 #node{
-    background: url('../doc/img/cate/node.png') no-repeat top center;
+    background: url('img/cate/node.png') no-repeat top center;
     background-size: 100%;
 }
 #roule{
-    background: url('../doc/img/cate/roule.png') no-repeat top center;
+    background: url('img/cate/roule.png') no-repeat top center;
     background-size: 100%;
 }
 
@@ -254,15 +254,15 @@ p{
 
 }
 #glpi{
-    background: url('../doc/img/cate/glpi.png') no-repeat top center;
+    background: url('img/cate/glpi.png') no-repeat top center;
     background-size: 100%;
 }
 #aff{
-    background: url('../doc/img/cate/aff.png') no-repeat top center;
+    background: url('img/cate/aff.png') no-repeat top center;
     background-size: 100%;
 }
 #sig{
-    background: url('../doc/img/cate/sig.png') no-repeat top center;
+    background: url('img/cate/sig.png') no-repeat top center;
     background-size: 100%;
 }
 
