@@ -10,9 +10,9 @@
 
 <?php
 
-		$cnx = mysql_connect( "localhost", "root", "");
+		$cnx = mysql_connect( "localhost", "aiman.bahouala", "motdepasse");
 
-		$db = mysql_select_db( "fiche");
+		mysql_select_db( "aiman.bahouala");
 
 	mysql_query("SET NAMES 'utf8'"); 
 
@@ -39,7 +39,7 @@
 		$POLM = $_POST['POLM'] ;
 		$autres = $_POST['autres'] ;
 
-		$sql = "INSERT INTO Fiche_pc (Banque, Comptabilité_et_Gestion, Négociation_et_Relation_Client, Services_Informatiques_aux_Organisations, nom, prenom, adresse, code_postal, ville, tel_por, mail, datenais, annee_en_cours, etablissement, Formation, specialite, spec, etablissement_titu, anneeobt, Forum, porte_ouverte, autres) VALUES ( '$BQ', '$CG', '$NRC', '$SIO', '$nom', '$prenom', '$adresse', '$codepostal', '$ville', '$telport', '$mail', '$datenais', '$annee', '$etabli', '$Formation', '$Spe', '$spec', '$etabliss', '$anneobt', '$FAE', '$POLM', '$autres')";
+		$sql = "INSERT INTO fiche_pc (Banque, Comptabilite_et_Gestion, Negociation_et_Relation_Client, Services_Informatiques_aux_Organisations, nom, prenom, adresse, code_postal, ville, tel_por, mail, datenais, annee_en_cours, etablissement, Formation, specialite, spec, etablissement_titu, anneeobt, Forum, porte_ouverte, autres) VALUES ( '$BQ', '$CG', '$NRC', '$SIO', '$nom', '$prenom', '$adresse', '$codepostal', '$ville', '$telport', '$mail', '$datenais', '$annee', '$etabli', '$Formation', '$Spe', '$spec', '$etabliss', '$anneobt', '$FAE', '$POLM', '$autres')";
 
 		$requete = mysql_query($sql, $cnx) or die ( mysql_error() ) ;
 
