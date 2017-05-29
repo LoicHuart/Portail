@@ -265,6 +265,10 @@ p{
     background: url('../doc/img/cate/sig.png') no-repeat top center;
     background-size: 100%;
 }
+#contact{
+     background: url('../doc/img/cate/contact.png') no-repeat top center;
+     background-size: 100%;
+ }
 
 
 /* RESPONSIVE */
