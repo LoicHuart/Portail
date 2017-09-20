@@ -17,7 +17,7 @@ body{
     background-color: #E6E6E6;
 }
 #content{ /* TOUT LE CONTENU DU SITE */
-    display:none;
+  
 
 }
 .section{ /* DIV PRINCIPALE DU LOADING SCREEN */
@@ -81,49 +81,6 @@ ul{
     font-family: 'Julius sans one' ,'sans-serif';
 }
 
-/* LOADING --------------------------------------------- */
-
-
-.center-v{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translateY(-50%) translateX(-50%);
-}
-
-.loader-quart{
-    position:relative;
-    width:50px;
-    height:50px;
-    display: inline-block;
-    border-radius: 50px;
-    border: 6px solid rgba(255,255,255,0.4);
-    vertical-align: middle;
-}
-
-.loader-quart:after{
-    position:absolute;
-    top: -6px;
-    left: -6px;
-    bottom: -6px;
-    right: -6px;
-    content:'';
-    display: inline-block;
-    border-radius: 50px;
-    border: 6px solid transparent;
-    border-top-color: #fff;
-    vertical-align: middle;
-    animation:spin 1s linear infinite;
-    -moz-animation:spin 1s linear infinite ;
-    -webkit-animation:spin 1s linear infinite ;
-}
-
-@keyframes spin{
-    0% { -webkit-transform: rotate(0deg); }
-    100% { -webkit-transform: rotate(360deg); }
-}
-
-
 /* HEADER --------------------------------------------- */
 
 header{ /* BARRE BLANCHE DE DEBUT */
@@ -131,7 +88,7 @@ header{ /* BARRE BLANCHE DE DEBUT */
     background-color: #424242;
 }
 .MainTitle{  /* titre principale du site (en haut a gauche) */
-    float: left;
+  text-align: center;
 }
 #menu{ /* icone en haut a droite (3 petites barres) */
     float:right;

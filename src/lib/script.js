@@ -1,10 +1,6 @@
 $(document).ready(function(){
 
-    setTimeout(function(){
-        $(".section").fadeOut(200, function() {
-            $("#content").fadeIn(200);
-        });
-    }, 1000);
+
 
 
     var iWindowsSize = $(window).width();
