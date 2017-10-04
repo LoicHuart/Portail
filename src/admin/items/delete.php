@@ -1,0 +1,71 @@
+<?php
+
+try
+{
+    $bdd = new PDO('mysql:host=localhost;dbname=portail_monge;charset=utf8', 'root', 'root');
+}
+catch (Exception $e)
+{
+    die('Erreur : ' . $e->getMessage());
+}
+
+if(!empty($_GET['id'])) // Recuperation de l'id via la methode GET
+{
+    $id = htmlentities($_GET['id']);
+}
+
+if(!empty($_POST)) //Si la SUPERGLOBALE POST n'est pas vide
+{
+    $id = $_POST['id']; // Recuperation de l'id via la methode POST
+
+    $sqelse = "DELETE FROM portail_items WHERE id = $id"; // Commande SQL pour suprimmer une entrée d'une table
+    $bdd->query($sqelse); // Execution de la commande precedente
+    header('Location: ../index.php'); // redirecton vers les contact
+}
+?>
+
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <title>PORTAIL - DELETE</title>
+    <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" >
+</head>
+
+<body>
+ <div class="bg">
+
+    <div class='container' id="cont1" >
+        <!-- Entete -->
+        <div class="row">
+            <div class="barre"> </div>
+            <h3>Suppression d'un items</h3>
+        </div>
+
+        <!-- bloc de confirmation de suppression -->
+        <div class="row">
+            <div id='formulaire' class="col-md-12 " >
+                <form method="POST" role="form" action="delete.php" class="form">
+
+                    <p class="alert alert-warning">Êtes-vous sûr de vouloir supprimer ?</p>
+                    <input type="hidden" name="id" value="<?php echo $id; ?>">
+                    <!-- btn -->
+                    <div id="blocksubb" class="col-md-12 form-group">
+                        <button type="button" class="btn btn-primary active" onclick="location.href='../index.php';" ><span class="glyphicon glyphicon-arrow-left"></span> Retour </button>
+                        <button type="submit" class="btn btn-success active" ><span class="glyphicon glyphicon-ok "></span> Oui </button>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+
+    </div>
+ </div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" ></script>
+<script type="text/javascript" src="../script.js" ></script>
+</body>
+</html>

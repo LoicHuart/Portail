@@ -43,6 +43,7 @@
             <a href="http://affichage.lyceemonge.lan"><div class='item' id='aff'><h4>AFFICHAGE</h4></div></a>
             <a href="http://sig.infomonge.net"><div class='item' id='sig'><h4>SIG</h4> </div></a>
             <a href="http://glpi.infomonge.net"><div class='item' id='glpi'><h4>GLPI</h4></div></a>
+            <a href="https://portail.infomonge.net/public"><div class='item' id='contact'><h4>PUBLIC</h4></div></a>
         </div>
     </section>
 

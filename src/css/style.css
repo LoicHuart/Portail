@@ -20,6 +20,15 @@ body{
   
 
 }
+
+@font-face {
+	font-family: "Antic";
+	src: url('../fonts/Antic-Regular.ttf');
+}
+@font-face {
+	font-family: "julius sans one";
+	src: url('../fonts/JuliusSansOne-Regular.ttf');
+}
 .section{ /* DIV PRINCIPALE DU LOADING SCREEN */
     position: relative;
     background-color: #424242;
@@ -78,7 +87,7 @@ ul{
     color: white;
     font-size: 25px;
     text-transform: uppercase;
-    font-family: 'Julius sans one' ,'sans-serif';
+    font-family: 'julius sans one' ,'sans-serif';
 }
 
 /* HEADER --------------------------------------------- */
@@ -222,6 +231,10 @@ p{
     background: url('img/cate/sig.png') no-repeat top center;
     background-size: 100%;
 }
+#contact{
+     background: url('img/cate/contact.png') no-repeat top center;
+     background-size: 100%;
+ }
 
 
 /* RESPONSIVE */

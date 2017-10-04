@@ -1,0 +1,158 @@
+<?php
+
+try
+{
+    $bdd = new PDO('mysql:host=localhost;dbname=portail_monge;charset=utf8', 'root', 'root');
+}
+catch (Exception $e)
+{
+    die('Erreur : ' . $e->getMessage());
+}
+
+
+if(!empty($_GET['id'])) // Recuperation de l'id via la methode GET
+{
+    $id = htmlentities($_GET['id']);
+}
+
+$name = $nameError = $nameError2 = $compl = $complError = $complError2 = $sql = $com = $comError = $comError2 = $chemin = $cheminError = $cheminError2 = $num = $numError = $numError2 = "";
+
+if(!empty($_POST)){
+
+
+    $name = htmlspecialchars($_POST['nomitem'], ENT_QUOTES); // Recuperation du nom de l'item
+    $compl = htmlspecialchars($_POST['nomid'], ENT_QUOTES); // Recuperation du nom de l'item pour l'id de l'item
+    $com = htmlspecialchars($_POST['lienhttp'], ENT_QUOTES); // Recuperation du lien HTTP
+    $chemin = $_POST['cheminimage']; // Recuperation du chemin de l'image
+    $num = htmlspecialchars($_POST['numeroligne'], ENT_QUOTES); // Recuperation du commmentaire
+    $isSuccess = true; // variable de verification de variable
+
+    if(empty($name)) // si le champs nom est vide
+    {
+        $nameError = "Ce champ ne doit pas être vide";
+        $nameError2 = "has-error";
+        $isSuccess = false;
+    }
+
+    if(empty($compl)) // si le champs num est vide
+    {
+        $complError = "Ce champ ne doit pas être vide";
+        $complError2 = "has-error";
+        $isSuccess = false;
+    }
+    if(empty($com)) // si le champs num est vide
+    {
+        $comError = "Ce champ ne doit pas être vide";
+        $comError2 = "has-error";
+        $isSuccess = false;
+    }
+    if(empty($chemin)) // si le champs num est vide
+    {
+        $cheminError = "Ce champ ne doit pas être vide";
+        $cheminError2 = "has-error";
+        $isSuccess = false;
+    }
+    if(empty($num)) // si le champs num est vide
+    {
+        $numError = "Ce champ ne doit pas être vide";
+        $numError2 = "has-error";
+        $isSuccess = false;
+    }
+
+    if($isSuccess) // si aucune erreur n'a ete detecté
+    {
+        $sql = "UPDATE portail_items SET nom='$name', nomid='$compl', lienhttp='$com', cheminimage='$chemin', numeroligne=$num WHERE id=$id"; // requete de modification SQL
+        $bdd->query($sql); // Execution de la requete
+        header('Location: ../index.php'); // redirection vers l'acceuil
+    }
+
+}else { //
+    $sqelse = "SELECT * FROM portail_items WHERE id = $id"; // Selection des données du contact
+    $liste = $bdd->query($sqelse); // Extraction
+    $item = $liste->fetch();
+
+    $name = $item['nom']; // AFFECTATION DES VARIABLE
+    $compl = $item['nomid']; //
+    $com = $item['lienhttp']; //
+    $chemin = $item['cheminimage']; //
+    $num = $item['numeroligne']; //
+}
+?>
+
+
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <title>PORTAIL - UPDATE</title>
+    <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" >
+  </head>
+  <body>
+    <div class="bg">
+        <div class='container' id="cont1" >
+            <!-- Entete -->
+            <div class="row">
+                <h3>Modification d'un message</h3>
+            </div>
+
+            <!-- bloc du formulaire -->
+            <div class="row">
+                <div id='formulaire' class="col-md-12 " >
+                    <form method="POST" role="form" action="<?php echo 'update.php?id='.$id; ?>" class="form"> <!-- generation du lien grace a l'id -->
+
+                        <!-- champ nom -->
+                        <div class="form-group <?php echo $nameError2; ?> ">
+
+                            <label for="name">Nom </label>
+                            <input type="text" class="form-control" id="nomitem" name="nomitem" maxlength="20" value="<?php echo $name; ?>" ><!-- Affecte une classe au input afin de le rendre rouge en cas d'erreur -->
+                            <span class="help-inline"><?php echo $nameError; ?> </span>
+                            <span id="helpBlock" class="help-block">Nom de l'item, en MAJUSCULE pas d'espace ni de caractères spéciaux. </span>
+                        </div>
+                        <!-- champ nom id -->
+                        <div class="form-group <?php echo $complError2; ?>">
+                            <label for="compl">Nom id</label>
+                            <input type="text" class="form-control" id="nomid" name="nomid" maxlength="20" value="<?php echo $compl; ?>" ><!-- Affecte une classe au input afin de le rendre rouge en cas d'erreur -->
+                            <span class="help-inline"><?php echo $complError; ?> </span>
+                            <span id="helpBlock" class="help-block">Nom pour l'id de l'item, a titre indicatif, uniquement pour la BDD. pas d'espace ni de caractères spéciaux. </span>
+                        </div>
+
+                        <!-- champ lienhttp -->
+                        <div class="form-group <?php echo $comError2; ?>">
+                            <label for="com">Lien http</label>
+                            <input type="text" class="form-control" id="lienhttp" name="lienhttp" maxlength="20" value="<?php echo $com; ?>">
+                            <span class="help-inline"><?php echo $comError; ?> </span>
+                            <span id="helpBlock" class="help-block">Lien HTTP/HTTPS. </span>
+                        </div>
+
+                        <!-- champ chemin image -->
+                        <div class="form-group <?php echo $cheminError2; ?>">
+                            <label for="com">Chemin de l'image</label>
+                            <input type="text" class="form-control" id="cheminimage" name="cheminimage" maxlength="20" value="<?php echo $chemin; ?>" >
+                            <span class="help-inline"><?php echo $cheminError; ?> </span>
+                            <span id="helpBlock" class="help-block">Chemin de l'image. </span>
+                        </div>
+
+                        <!-- champ numero ligne -->
+                        <div class="form-group <?php echo $numError2; ?>">
+                            <label for="com">Numero de ligne</label>
+                            <input type="text" class="form-control" id="numeroligne" name="numeroligne" maxlength="20" value="<?php echo $num; ?>" >
+                            <span class="help-inline"><?php echo $numError2; ?> </span>
+                            <span id="helpBlock" class="help-block">Numero de ligne a laquelle l'item est affecté. </span>
+                        </div>
+
+                        <button type="button" class="btn btn-primary active" onclick="location.href='../index.php';" ><span class="glyphicon glyphicon-arrow-left"></span> Retour </button>
+                        <button type="submit" class="btn btn-submit btn-success active" ><span class="glyphicon glyphicon-ok "></span> Modifier </button>
+
+                    </form>
+                </div>
+            </div>
+          </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" ></script>
+  	<script type="text/javascript" src="../../script.js" ></script>
+  </body>
+</html>
