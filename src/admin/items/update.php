@@ -1,14 +1,6 @@
 <?php
 
-try
-{
-    $bdd = new PDO('mysql:host=localhost;dbname=portail_monge;charset=utf8', 'root', 'root');
-}
-catch (Exception $e)
-{
-    die('Erreur : ' . $e->getMessage());
-}
-
+include '../../config/bdd.php';
 
 if(!empty($_GET['id'])) // Recuperation de l'id via la methode GET
 {

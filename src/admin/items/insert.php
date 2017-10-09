@@ -1,13 +1,6 @@
 <?php
 
-try
-{
-    $bdd = new PDO('mysql:host=localhost;dbname=portail_monge;charset=utf8', 'root', 'root');
-}
-catch (Exception $e)
-{
-    die('Erreur : ' . $e->getMessage());
-}
+include '../../config/bdd.php';
 
 $name = $nameError = $nameError2 = $compl = $complError = $complError2 = $sql = $com = $comError = $comError2 = $chemin = $cheminError = $cheminError2 = $num = $numError = $numError2 = "";
 
