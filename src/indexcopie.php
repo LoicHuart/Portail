@@ -10,7 +10,6 @@ include 'config/bdd.php';
 	<meta charset="UTF-8">
     <link rel="stylesheet" href="css/style2.css">
 	<meta name="viewport" content="width=device-width" />
-	<link href="https://fonts.googleapis.com/css?family=Antic|Julius+Sans+One|" rel="stylesheet">
 	<title>PORTAIL</title>
 </head>
 <body>
@@ -20,7 +19,7 @@ include 'config/bdd.php';
 
     <header>
         <div class="wrapper">
-            <a href="index.html"><h1 class='MainTitle'>PORTAIL</h1></a>
+            <a href="index.php"><h1 class='MainTitle'>PORTAIL</h1></a>
             <div class='clear'></div> 
         </div>
     </header>
