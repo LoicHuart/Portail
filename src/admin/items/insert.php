@@ -99,7 +99,7 @@ if(!empty($_POST)){ // Si la methode POST est utilisé
                     <!-- champ lienhttp -->
                         <div class="form-group <?php echo $comError2; ?>">
                             <label for="com">Lien http</label>
-                            <input type="text" class="form-control" id="lienhttp" name="lienhttp" maxlength="20" >
+                            <input type="text" class="form-control" id="lienhttp" name="lienhttp" maxlength="100" >
                             <span class="help-inline"><?php echo $comError; ?> </span>
                             <span id="helpBlock" class="help-block">Lien HTTP/HTTPS. </span>
                         </div>
@@ -107,7 +107,7 @@ if(!empty($_POST)){ // Si la methode POST est utilisé
                     <!-- champ chemin image -->
                     <div class="form-group <?php echo $cheminError2; ?>">
                         <label for="com">Chemin de l'image</label>
-                        <input type="text" class="form-control" id="cheminimage" name="cheminimage" maxlength="20" >
+                        <input type="text" class="form-control" id="cheminimage" name="cheminimage" maxlength="100" >
                         <span class="help-inline"><?php echo $cheminError; ?> </span>
                         <span id="helpBlock" class="help-block">Chemin de l'image. </span>
                     </div>

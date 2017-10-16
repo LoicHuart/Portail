@@ -77,19 +77,19 @@ if(!empty($_POST)){
                             <label for="name">Nom de la ligne </label>
                             <input type="text" class="form-control" id="nomligne" name="nomligne" maxlength="20" value="<?php echo $name; ?>"><!-- Affecte une classe au input afin de le rendre rouge en cas d'erreur -->
                             <span class="help-inline"><?php echo $nameError; ?> </span>
-                            <span id="helpBlock" class="help-block">Nom de la ligne, pas d'espace ni de caractères spéciaux. </span>
+                            <span id="helpBlock" class="help-block">Nom de la ligne, pas d'espace ni de caractères spéciaux, max. 20 caractères. </span>
                         </div>
                         <!-- champ nom complet -->
                         <div class="form-group <?php echo $complError2; ?>">
                             <label for="compl">Numero de ligne</label>
                             <input type="text" class="form-control" id="numeroligne" name="numeroligne" maxlength="20" value="<?php echo $compl; ?>">
                             <span class="help-inline"><?php echo $complError; ?> </span>
-                            <span id="helpBlock" class="help-block">Numero de la ligne, pas d'espace ni de caractères spéciaux. </span>
+                            <span id="helpBlock" class="help-block">Numero de la ligne, pas d'espace ni de caractères spéciaux, max. 20 caractères. </span>
                         </div>
 
                         <!-- champ commentaires -->
                         <div class="form-group <?php echo $comError2; ?>">
-                            <label for="com">Commentaires</label>
+                            <label for="com">Description</label>
                             <input type="text" class="form-control" id="commentaire" name="commentaire" maxlength="20" value="<?php echo $com; ?>">
                             <span class="help-inline"><?php echo $comError; ?> </span>
                         </div>
