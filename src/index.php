@@ -20,14 +20,14 @@ include 'config/bdd.php';
 
     <header>
         <div class="wrapper">
-            <a href="index.html"><h1 class='MainTitle'>PORTAIL</h1></a>
+            <a href="index.php"><h1 class='MainTitle'>PORTAIL</h1></a>
             <div class='clear'></div> 
         </div>
     </header>
-
+    <body>
         <?php
-        $reponselignes = $bdd->query('SELECT id FROM portail_ligne');
-        while ($donneesligne = $reponselignes->fetch())
+        $reponselignes = $bdd->query('SELECT id FROM portail_ligne'); //Récupère les id des lignes dans la BDD
+        while ($donneesligne = $reponselignes->fetch()) //Permet d'afficher les lignes
         {
             
         ?>
@@ -35,13 +35,13 @@ include 'config/bdd.php';
             <div class="wrapper">
             
         <?php
-            $id = $donneesligne['id'];
+            $id = $donneesligne['id']; //Récupère l'id de la ligne pour pouvoir 
  
         ?>
         
                 <?php
-                $reponseitems = $bdd->query("SELECT * FROM portail_items WHERE numeroligne = $id");
-                while ($donneesitems = $reponseitems->fetch())
+                $reponseitems = $bdd->query("SELECT * FROM portail_items WHERE numeroligne = $id"); //Récupère les items liés à la ligne
+                while ($donneesitems = $reponseitems->fetch())//Permet d'afficher les items
                 {
                 ?>
                 <a href="<?php echo $donneesitems['lienhttp']; ?>">
@@ -63,7 +63,6 @@ include 'config/bdd.php';
         $reponseligne->closeCursor();
 
     ?>
-    
 <!-- Add libraries -->
     <script type="text/javascript" src="lib/jquery-3.1.1.js" ></script>
     <script type="text/javascript" src="lib/script.js" ></script>

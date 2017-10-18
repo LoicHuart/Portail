@@ -164,11 +164,11 @@ p{
     padding: 20px;
 }
 
-.ligne:nth-child(odd){
+.ligne:nth-child(odd) { /*MET LA PREMIERE LIGNE D'UNE COULEUR*/
     background-color: #F2F2F2;
 }
 
-.ligne:nth-child(even) {
+.ligne:nth-child(even) { /*MET LA DEUXIEME LIGNE D'UNE AUTRE COULEUR */
     background-color: #E6E6E6;
 }
 
