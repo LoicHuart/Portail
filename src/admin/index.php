@@ -43,7 +43,7 @@ include '../config/bdd.php';
                         <tr>
                             <th>Nom ligne</th>
                             <th>Numero de ligne</th>
-                            <th>Description</th>
+                            <th>Commentaires</th>
                             <th>Actions</th>
                         </tr>
                     </thead>
@@ -90,9 +90,11 @@ include '../config/bdd.php';
                 <table class='table table-condensed table-striped '>
                     <thead>
                         <tr>
-                            <th>Nom message</th>
-                            <th>Message</th>
-                            <th>Commentaires</th>
+                            <th>Nom de l'item</th>
+                            <th>ID de l'item</th>
+                            <th>Lien http(s)</th>
+                            <th>Chemin de l'image</th>
+                            <th>Ligne de l'item</th>
                             <th>Actions</th>
                         </tr>
                     </thead>
