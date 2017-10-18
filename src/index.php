@@ -20,7 +20,7 @@ include 'config/bdd.php';
 
     <header>
         <div class="wrapper">
-            <a href="index.php"><h1 class='MainTitle'>PORTAIL</h1></a>
+            <a href="index.php"><h1 class='MainTitle'>PORTAIL</h1></a> 
             <div class='clear'></div> 
         </div>
     </header>
@@ -35,12 +35,15 @@ include 'config/bdd.php';
             <div class="wrapper">
             
         <?php
-            $id = $donneesligne['id']; //Récupère l'id de la ligne pour pouvoir 
+            $id = $donneesligne['id']; //Récupère l'id de la ligne
  
         ?>
         
                 <?php
-                $reponseitems = $bdd->query("SELECT * FROM portail_items WHERE numeroligne = $id"); //Récupère les items liés à la ligne
+                $reponseitems = $bdd->query("SELECT * FROM portail_items WHERE numeroligne = $id"); 
+
+                //Récupère les items dont l'id est le même que celui de la ligne
+
                 while ($donneesitems = $reponseitems->fetch())//Permet d'afficher les items
                 {
                 ?>
@@ -52,7 +55,7 @@ include 'config/bdd.php';
 
             <?php
                 }
-                $reponseitems->closeCursor(); // Termine le traitement de la requête
+                $reponseitems->closeCursor(); // Termine le traitement de la requête des items
                 
             ?>
 
@@ -60,7 +63,7 @@ include 'config/bdd.php';
         </section>
     <?php
         }
-        $reponseligne->closeCursor();
+        $reponseligne->closeCursor();// Termine le traitement de la requête des lignes
 
     ?>
 <!-- Add libraries -->
