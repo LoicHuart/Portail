@@ -162,7 +162,14 @@ p{
 .ligne{
     text-align: center;
     padding: 20px;
+}
+
+.ligne:nth-child(odd){
     background-color: #F2F2F2;
+}
+
+.ligne:nth-child(even) {
+    background-color: #E6E6E6;
 }
 
 /* RESPONSIVE */
