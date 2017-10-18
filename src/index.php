@@ -7,11 +7,11 @@ include 'config/bdd.php';
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="UTF-8">
+    <meta charset="UTF-8">
     <link rel="stylesheet" href="css/style.css">
-	<meta name="viewport" content="width=device-width" />
-	<link href="https://fonts.googleapis.com/css?family=Antic|Julius+Sans+One|" rel="stylesheet">
-	<title>PORTAIL</title>
+    <meta name="viewport" content="width=device-width" />
+    <link href="https://fonts.googleapis.com/css?family=Antic|Julius+Sans+One|" rel="stylesheet">
+    <title>PORTAIL</title>
 </head>
 <body>
 
@@ -25,39 +25,48 @@ include 'config/bdd.php';
         </div>
     </header>
 
-    <section id="premiere">
-        <div class="wrapper">
-                <a href="https://www.ent-lycees.fr/"><div class='item' id='ent'><h4>ENT</h4></div></a>
-                <a href="http://pronote.lyceemonge.eu/"><div class='item' id='pronote'><h4>Pronote</h4> </div></a>
-                <a href="https://lecnam.net/ "><div class='item' id='cnam'><h4>CNAM</h4></div></a>
-                <a href="http://ovh.infomonge.net/"><div class='item' id='ovh'><h4>SIO OVH</h4></div></a>
-        </div>
-    </section>
+        <?php
+        $reponselignes = $bdd->query('SELECT id FROM portail_ligne');
+        while ($donneesligne = $reponselignes->fetch())
+        {
+            
+        ?>
+        <section class="ligne">
+            <div class="wrapper">
+            
+        <?php
+            $id = $donneesligne['id'];
+ 
+        ?>
+        
+                <?php
+                $reponseitems = $bdd->query("SELECT * FROM portail_items WHERE numeroligne = $id");
+                while ($donneesitems = $reponseitems->fetch())
+                {
+                ?>
+                <a href="<?php echo $donneesitems['lienhttp']; ?>">
+                    <div class="item" id="<?php echo $donneesitems['nomid']?>" style="background: url('<?php echo $donneesitems['cheminimage']?>') no-repeat top center; background-size: 100%;">
+                        <h4><?php echo $donneesitems['nom'] ?></h4>
+                    </div>
+                </a>
 
-    <section id="deuxieme">
-        <div class="wrapper">
-            <a href="https://portail.infomonge.net/gitlab"><div class='item' id='git'><h4>GitLab</h4></div></a>
-            <a href="https://portail.infomonge.net/moodle">    <div class='item' id='mood'><h4>Moodle</h4></div></a>
-            <a href="https://portail.infomonge.net/slam"><div class='item' id='slam'><h4>SLAM</h4></div></a>
-            <a href="https://portail.infomonge.net/node"><div class='item' id='node'><h4>NODE</h4></div></a>
-            <a href="https://portail.infomonge.net/ROULETTE"><div class='item' id='roule'><h4>ROULETTE</h4></div></a>
-        </div>
-    </section>
+            <?php
+                }
+                $reponseitems->closeCursor(); // Termine le traitement de la requête
+                
+            ?>
 
-    <section id="troisieme">
-        <div class="wrapper">
-            <a href="http://affichage.lyceemonge.lan"><div class='item' id='aff'><h4>AFFICHAGE</h4></div></a>
-            <a href="http://sig.infomonge.net"><div class='item' id='sig'><h4>SIG</h4> </div></a>
-            <a href="http://glpi.infomonge.net"><div class='item' id='glpi'><h4>GLPI</h4></div></a>
-            <a href="https://portail.infomonge.net/public"><div class='item' id='contact'><h4>PUBLIC</h4></div></a>
-        </div>
-    </section>
+            </div>
+        </section>
+    <?php
+        }
+        $reponseligne->closeCursor();
 
-</div>
-
+    ?>
+    
 <!-- Add libraries -->
-	<script type="text/javascript" src="lib/jquery-3.1.1.js" ></script>
-  	<script type="text/javascript" src="lib/script.js" ></script>
+    <script type="text/javascript" src="lib/jquery-3.1.1.js" ></script>
+    <script type="text/javascript" src="lib/script.js" ></script>
     <script type="text/javascript" src="lib/jquery.color.js" ></script>
     <script type="text/javascript" src="lib/sidebar.js" ></script>
 </body>

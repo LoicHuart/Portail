@@ -22,12 +22,12 @@ body{
 }
 
 @font-face {
-	font-family: "Antic";
-	src: url('../fonts/Antic-Regular.ttf');
+    font-family: "Antic";
+    src: url('../fonts/Antic-Regular.ttf');
 }
 @font-face {
-	font-family: "julius sans one";
-	src: url('../fonts/JuliusSansOne-Regular.ttf');
+    font-family: "julius sans one";
+    src: url('../fonts/JuliusSansOne-Regular.ttf');
 }
 .section{ /* DIV PRINCIPALE DU LOADING SCREEN */
     position: relative;
@@ -158,84 +158,12 @@ p{
     background-color: #E6E6E6;
 }
 
-/* PREMIERE --------------------------------------------- */
-#premiere{
+/* LIGNE --------------------------------------------- */
+.ligne{
     text-align: center;
     padding: 20px;
     background-color: #F2F2F2;
 }
-#ent{ /* PREMEIRE ELEMENT (ENT) */
-    background: url('img/cate/ent.png') no-repeat top center;
-    background-size: 100%;
-}
-#pronote{ /* DEUXIEME ELEMENT (PRONOTE) */
-    background: url('img/cate/pro.png') no-repeat top center;
-    background-size: 100%;
-}
-#cnam{
-    background: url('img/cate/cnam.png') no-repeat top center;
-    background-size: 100%;
-}
-#ovh{
-    background: url('img/cate/ovh.png') no-repeat top center;
-    background-size: 100%;
-}
-
-/* DEUXIEME --------------------------------------------- */
-
-#deuxieme{
-
-    text-align: center;
-    padding: 20px;
-    background-color: #E6E6E6;
-}
-#mood{
-    background: url('img/cate/mood.png') no-repeat top center;
-    background-size: 100%;
-}
-#git{
-    background: url('img/cate/git.png') no-repeat top center;
-    background-size: 100%;
-}
-#slam{
-    background: url('img/cate/slam.png') no-repeat top center;
-    background-size: 100%;
-}
-#node{
-    background: url('img/cate/node.png') no-repeat top center;
-    background-size: 100%;
-}
-#roule{
-    background: url('img/cate/roule.png') no-repeat top center;
-    background-size: 100%;
-}
-
-/* troisieme --------------------------------------------- */
-
-#troisieme{
-
-    padding: 20px;
-    text-align: center;
-    background-color: #F2F2F2;
-
-}
-#glpi{
-    background: url('img/cate/glpi.png') no-repeat top center;
-    background-size: 100%;
-}
-#aff{
-    background: url('img/cate/aff.png') no-repeat top center;
-    background-size: 100%;
-}
-#sig{
-    background: url('img/cate/sig.png') no-repeat top center;
-    background-size: 100%;
-}
-#contact{
-     background: url('img/cate/contact.png') no-repeat top center;
-     background-size: 100%;
- }
-
 
 /* RESPONSIVE */
 /* < 1097PX --------------------------------------------- */
