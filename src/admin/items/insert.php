@@ -9,7 +9,7 @@ if(!empty($_POST)){ // Si la methode POST est utilisé
     $name = htmlspecialchars($_POST['nomitem'], ENT_QUOTES); // Recuperation du nom de l'item
     $compl = htmlspecialchars($_POST['nomid'], ENT_QUOTES); // Recuperation du nom de l'item pour l'id de l'item
     $com = htmlspecialchars($_POST['lienhttp'], ENT_QUOTES); // Recuperation du lien HTTP
-    $chemin = $_POST['cheminimage']; // Recuperation du chemin de l'image
+    $chemin = "css/img/cate/" . $compl . ".png"; // Recuperation du chemin de l'image
     $num = htmlspecialchars($_POST['numeroligne'], ENT_QUOTES); // Recuperation du commmentaire
     $isSuccess = true; // variable de verification de variable
 
@@ -44,15 +44,57 @@ if(!empty($_POST)){ // Si la methode POST est utilisé
         $numError2 = "has-error";
         $isSuccess = false;
     }
-
-    if($isSuccess) // si aucune erreur n'a ete detecté
+    //if($isSuccess) // si aucune erreur n'a ete detecté
     {
-        $sql = "INSERT INTO portail_items (nom, nomid, lienhttp, cheminimage, numeroligne) VALUES('$name', '$compl', '$com','$chemin', $num)"; // Insertion dans la table du nouvel item
+       $sql = "INSERT INTO portail_items (nom, nomid, lienhttp, cheminimage, numeroligne) VALUES('$name', '$compl', '$com','$chemin', $num)"; // Insertion dans la table du nouvel item
         $bdd->query($sql);
         header('Location: ../index.php'); // Redirection vers l'acceuil du panel admin
 
     }
 
+    if (isset($_POST['send']))
+    {
+
+        $chemin = "../../css/img/cate/"; // Recuperation du chemin de l'image
+        $filename = $_FILES["file"]["name"];
+        $file_basename = substr($filename, 0, strripos($filename, '.')); // get file extention
+        $file_ext = substr($filename, strripos($filename, '.')); // get file name
+        $filesize = $_FILES["file"]["size"];
+        $allowed_file_types = array('.jpg','.jpeg','.png','.bmp');
+
+        if (in_array($file_ext,$allowed_file_types) && ($filesize < 300000))
+        {
+            // Rename file
+            $newfilename =  $compl . ".png";
+            if (file_exists("../" . $chemin . $newfilename))
+            {
+                // file already exists error
+                echo "You have already uploaded this file.";
+            }
+            else
+            {
+                move_uploaded_file($_FILES["file"]["tmp_name"], $chemin . $newfilename);
+                echo "File uploaded successfully.";
+            }
+        }
+        elseif (empty($file_basename))
+        {
+            // file selection error
+            echo "Please select a file to upload.";
+        }
+        elseif ($filesize > 300000)
+        {
+            // file size error
+            echo "The file you are trying to upload is too large.";
+        }
+        else
+        {
+            // file type error
+            echo "Only these file typs are allowed for upload: " . implode(', ',$allowed_file_types);
+            unlink($_FILES["file"]["tmp_name"]);
+        }
+
+    }
 }
 ?>
 
@@ -78,7 +120,7 @@ if(!empty($_POST)){ // Si la methode POST est utilisé
         <!-- bloc ajout d'une ligne -->
         <div class="row">
             <div id='formulaire' class="col-md-12 " >
-                <form method="POST" role="form" action="insert.php" class="form">
+                <form method="POST" role="form" action="insert.php" class="form" enctype="multipart/form-data">
 
                     <!-- champ nom -->
                         <div class="form-group <?php echo $nameError2; ?> ">
@@ -104,10 +146,10 @@ if(!empty($_POST)){ // Si la methode POST est utilisé
                             <span id="helpBlock" class="help-block">Lien HTTP/HTTPS. </span>
                         </div>
 
-                    <!-- champ chemin image -->
+                    <!-- Champ upload image -->
                     <div class="form-group <?php echo $cheminError2; ?>">
-                        <label for="com">Chemin de l'image</label>
-                        <input type="text" class="form-control" id="cheminimage" name="cheminimage" maxlength="100" >
+                        <label for="com">Image</label>
+                        <input type="file" class="form-control" name="file">
                         <span class="help-inline"><?php echo $cheminError; ?> </span>
                         <span id="helpBlock" class="help-block">Chemin de l'image. </span>
                     </div>
@@ -121,7 +163,7 @@ if(!empty($_POST)){ // Si la methode POST est utilisé
                     </div>
 
                             <button type="button" class="btn btn-primary active" onclick="location.href='index.php';" ><span class="glyphicon glyphicon-arrow-left"></span> Retour </button>
-                            <button type="submit" class="btn btn-submit btn-success active" ><span class="glyphicon glyphicon-ok "></span> Ajouter </button>
+                            <button type="submit" class="btn btn-submit btn-success active" name="send" ><span class="glyphicon glyphicon-ok "></span> Ajouter </button>
 
                     </form>
                 </div>

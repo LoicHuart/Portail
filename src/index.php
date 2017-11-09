@@ -63,7 +63,7 @@ include 'config/bdd.php';
         </section>
     <?php
         }
-        $reponseligne->closeCursor();// Termine le traitement de la requête des lignes
+        $reponselignes->closeCursor();// Termine le traitement de la requête des lignes
 
     ?>
 <!-- Add libraries -->

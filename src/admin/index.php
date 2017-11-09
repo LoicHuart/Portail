@@ -80,7 +80,7 @@ include '../config/bdd.php';
         <div class='container'>
                         <div class="row ">
                 <div class="col-md-12 table-responsive ">
-                <h1><?php echo $titre ?></h1>
+                <h1></h1>
                 <div class="barre"> </div>
                 <h3>Gestion des items</h3>
                     <div class="containtable">
