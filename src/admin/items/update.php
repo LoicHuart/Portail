@@ -158,7 +158,7 @@ if (isset($_POST['send']))
                             <img border="0" src="../../<?php echo $chemin ?>"  width="200" height="120">
                             <input type="file" class="form-control" name="file">
                             <span class="help-inline"><?php echo $cheminError; ?> </span>
-                            <span id="helpBlock" class="help-block">Chemin de l'image. </span>
+                            <span id="helpBlock" class="help-block">Chemin de l'image. Si le champ "Nom id" de base est modifié, veuillez uploader l'image a nouveau. </span>
                         </div>
 
                         <!-- champ numero ligne -->
