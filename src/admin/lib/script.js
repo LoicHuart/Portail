@@ -1,8 +1,5 @@
 $(document).ready(function(){
 
-
-
-
     var iWindowsSize = $(window).width();
     if (iWindowsSize >=500 ){  // SI LA TAILLE DE LA FENETRE EST SUPERIEUR A 500PX, TU EXECUTE CES SCRIPT (version PC/Tablette)
 
