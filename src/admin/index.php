@@ -10,7 +10,6 @@ include '../config/bdd.php';
     <meta charset="UTF-8">
     <link rel="stylesheet" href="css/style.css">
     <meta name="viewport" content="width=device-width" />
-    <link href="https://fonts.googleapis.com/css?family=Antic|Julius+Sans+One|" rel="stylesheet">
     <link rel="stylesheet" href="../css/css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/css/bootstrap-theme.min.css" >
     <title>PORTAIL</title>
