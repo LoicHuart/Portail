@@ -44,9 +44,9 @@ if(!empty($_POST)){ // Si la methode POST est utilisé
         $numError2 = "has-error";
         $isSuccess = false;
     }
-    //if($isSuccess) // si aucune erreur n'a ete detecté
+//if($isSuccess) // si aucune erreur n'a ete detecté
     {
-       $sql = "INSERT INTO portail_items (nom, nomid, lienhttp, cheminimage, numeroligne) VALUES('$name', '$compl', '$com','$chemin', $num)"; // Insertion dans la table du nouvel item
+        $sql = "INSERT INTO portail_items (nom, nomid, lienhttp, cheminimage, numeroligne) VALUES('$name', '$compl', '$com','$chemin', $num)"; // Insertion dans la table du nouvel item
         $bdd->query($sql);
         header('Location: ../index.php'); // Redirection vers l'acceuil du panel admin
 
@@ -64,11 +64,11 @@ if(!empty($_POST)){ // Si la methode POST est utilisé
 
         if (in_array($file_ext,$allowed_file_types) && ($filesize < 300000))
         {
-            // Rename file
+// Rename file
             $newfilename =  $compl . ".png";
             if (file_exists("../" . $chemin . $newfilename))
             {
-                // file already exists error
+// file already exists error
                 echo "You have already uploaded this file.";
             }
             else
@@ -79,17 +79,17 @@ if(!empty($_POST)){ // Si la methode POST est utilisé
         }
         elseif (empty($file_basename))
         {
-            // file selection error
+// file selection error
             echo "Please select a file to upload.";
         }
         elseif ($filesize > 300000)
         {
-            // file size error
+// file size error
             echo "The file you are trying to upload is too large.";
         }
         else
         {
-            // file type error
+// file type error
             echo "Only these file typs are allowed for upload: " . implode(', ',$allowed_file_types);
             unlink($_FILES["file"]["tmp_name"]);
         }
@@ -100,17 +100,17 @@ if(!empty($_POST)){ // Si la methode POST est utilisé
 
 <!doctype html>
 <html lang="fr">
-  <head>
+<head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
     <title>PORTAIL - INSERT</title>
     <link rel="stylesheet" href="../../style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" >
-  </head>
+</head>
 
-  <body>
-  <div class="bg">
+<body>
+<div class="bg">
     <div class='container' id="cont1" >
         <!-- Entete -->
         <div class="row">
@@ -123,28 +123,28 @@ if(!empty($_POST)){ // Si la methode POST est utilisé
                 <form method="POST" role="form" action="insert.php" class="form" enctype="multipart/form-data">
 
                     <!-- champ nom -->
-                        <div class="form-group <?php echo $nameError2; ?> ">
+                    <div class="form-group <?php echo $nameError2; ?> ">
 
                         <label for="name">Nom </label>
-                            <input type="text" class="form-control" id="nomitem" name="nomitem" maxlength="20" ><!-- Affecte une classe au input afin de le rendre rouge en cas d'erreur -->
-                            <span class="help-inline"><?php echo $nameError; ?> </span>
-                            <span id="helpBlock" class="help-block">Nom de l'item, en MAJUSCULE pas d'espace ni de caractères spéciaux. </span>
-                        </div>
+                        <input type="text" class="form-control" id="nomitem" name="nomitem" maxlength="20" ><!-- Affecte une classe au input afin de le rendre rouge en cas d'erreur -->
+                        <span class="help-inline"><?php echo $nameError; ?> </span>
+                        <span id="helpBlock" class="help-block">Nom de l'item, en MAJUSCULE pas d'espace ni de caractères spéciaux. </span>
+                    </div>
                     <!-- champ nom id -->
-                        <div class="form-group <?php echo $complError2; ?>">
-                            <label for="compl">Nom id</label>
-                            <input type="text" class="form-control" id="nomid" name="nomid" maxlength="20" ><!-- Affecte une classe au input afin de le rendre rouge en cas d'erreur -->
-                            <span class="help-inline"><?php echo $complError; ?> </span>
-                            <span id="helpBlock" class="help-block">Nom pour l'id de l'item, a titre indicatif, uniquement pour la BDD. pas d'espace ni de caractères spéciaux. </span>
-                        </div>
+                    <div class="form-group <?php echo $complError2; ?>">
+                        <label for="compl">Nom id</label>
+                        <input type="text" class="form-control" id="nomid" name="nomid" maxlength="20" ><!-- Affecte une classe au input afin de le rendre rouge en cas d'erreur -->
+                        <span class="help-inline"><?php echo $complError; ?> </span>
+                        <span id="helpBlock" class="help-block">Nom pour l'id de l'item, a titre indicatif, uniquement pour la BDD. pas d'espace ni de caractères spéciaux. </span>
+                    </div>
 
                     <!-- champ lienhttp -->
-                        <div class="form-group <?php echo $comError2; ?>">
-                            <label for="com">Lien http</label>
-                            <input type="text" class="form-control" id="lienhttp" name="lienhttp" maxlength="100" >
-                            <span class="help-inline"><?php echo $comError; ?> </span>
-                            <span id="helpBlock" class="help-block">Lien HTTP/HTTPS. </span>
-                        </div>
+                    <div class="form-group <?php echo $comError2; ?>">
+                        <label for="com">Lien http</label>
+                        <input type="text" class="form-control" id="lienhttp" name="lienhttp" maxlength="100" >
+                        <span class="help-inline"><?php echo $comError; ?> </span>
+                        <span id="helpBlock" class="help-block">Lien HTTP/HTTPS. </span>
+                    </div>
 
                     <!-- Champ upload image -->
                     <div class="form-group <?php echo $cheminError2; ?>">
@@ -162,19 +162,19 @@ if(!empty($_POST)){ // Si la methode POST est utilisé
                         <span id="helpBlock" class="help-block">Numero de ligne a laquelle l'item est affecté. </span>
                     </div>
 
-                            <button type="button" class="btn btn-primary active" onclick="location.href='index.php';" ><span class="glyphicon glyphicon-arrow-left"></span> Retour </button>
-                            <button type="submit" class="btn btn-submit btn-success active" name="send" ><span class="glyphicon glyphicon-ok "></span> Ajouter </button>
+                    <button type="button" class="btn btn-primary active" onclick="location.href='index.php';" ><span class="glyphicon glyphicon-arrow-left"></span> Retour </button>
+                    <button type="submit" class="btn btn-submit btn-success active" name="send" ><span class="glyphicon glyphicon-ok "></span> Ajouter </button>
 
-                    </form>
-                </div>
+                </form>
             </div>
+        </div>
 
     </div>
-  </div>
+</div>
 
-      
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" ></script>
-  	<script type="text/javascript" src="../../script.js" ></script>
-  </body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" ></script>
+<script type="text/javascript" src="../../script.js" ></script>
+</body>
 </html>
