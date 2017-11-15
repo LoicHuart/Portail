@@ -105,8 +105,8 @@ if(!empty($_POST)){ // Si la methode POST est utilisé
     <meta charset="utf-8">
     <title>PORTAIL - INSERT</title>
     <link rel="stylesheet" href="../../style.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" >
+    <link rel="stylesheet" href="../../css/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../css/css/bootstrap-theme.min.css" >
 </head>
 
 <body>
@@ -162,7 +162,7 @@ if(!empty($_POST)){ // Si la methode POST est utilisé
                         <span id="helpBlock" class="help-block">Numero de ligne a laquelle l'item est affecté. </span>
                     </div>
 
-                    <button type="button" class="btn btn-primary active" onclick="location.href='index.php';" ><span class="glyphicon glyphicon-arrow-left"></span> Retour </button>
+                    <button type="button" class="btn btn-primary active" onclick="location.href='../index.php';" ><span class="glyphicon glyphicon-arrow-left"></span> Retour </button>
                     <button type="submit" class="btn btn-submit btn-success active" name="send" ><span class="glyphicon glyphicon-ok "></span> Ajouter </button>
 
                 </form>
@@ -173,8 +173,8 @@ if(!empty($_POST)){ // Si la methode POST est utilisé
 </div>
 
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" ></script>
+<script type="text/javascript" src="../lib/jquery-3.1.1.js" ></script>
+<script type="text/javascript" src="../../css/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="../../script.js" ></script>
 </body>
 </html>

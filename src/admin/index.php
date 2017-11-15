@@ -11,9 +11,8 @@ include '../config/bdd.php';
     <link rel="stylesheet" href="css/style.css">
     <meta name="viewport" content="width=device-width" />
     <link href="https://fonts.googleapis.com/css?family=Antic|Julius+Sans+One|" rel="stylesheet">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" >
-    <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/noppa/text-security/master/dist/text-security.css">
+    <link rel="stylesheet" href="../css/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/css/bootstrap-theme.min.css" >
     <title>PORTAIL</title>
 </head>
 <body>
@@ -132,6 +131,7 @@ include '../config/bdd.php';
 
 <!-- Add libraries -->
 <script type="text/javascript" src="lib/jquery-3.1.1.js" ></script>
+<script src="../css/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="lib/script.js" ></script>
 <script type="text/javascript" src="lib/jquery.color.js" ></script>
 <script type="text/javascript" src="lib/sidebar.js" ></script>
