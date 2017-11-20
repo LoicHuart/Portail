@@ -43,8 +43,8 @@ if(!empty($_POST)){ // Si la methode POST est utilisé
     <meta charset="utf-8">
     <title>PORTAIL - INSERT</title>
     <link rel="stylesheet" href="../../style.css">
-    <link rel="stylesheet" href="../../css/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../../css/css/bootstrap-theme.min.css" >
+    <link rel="stylesheet" href="../css/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/css/bootstrap-theme.min.css" >
 </head>
 
 <body>
@@ -84,7 +84,7 @@ if(!empty($_POST)){ // Si la methode POST est utilisé
                         <span id="helpBlock" class="help-block">Commentaire utile a la gestion des lignes,  max. 20 caractères. </span>
                     </div>
 
-                    <button type="button" class="btn btn-primary active" onclick="location.href='../index.php';" ><span class="glyphicon glyphicon-arrow-left"></span> Retour </button>
+                    <button type="button" class="btn btn-primary active" onclick="location.href='index.php';" ><span class="glyphicon glyphicon-arrow-left"></span> Retour </button>
                     <button type="submit" class="btn btn-submit btn-success active" ><span class="glyphicon glyphicon-ok "></span> Ajouter </button>
 
                 </form>
