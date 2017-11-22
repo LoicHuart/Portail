@@ -168,8 +168,8 @@ if(!empty($_POST)){ // Si la methode POST est utilisé
                         <span id="helpBlock" class="help-block">Numero de ligne a laquelle l'item est affecté. </span>
                     </div>
 
-                    <button type="button" class="btn btn-primary active" onclick="location.href='../index.php';" ><span class="glyphicon glyphicon-arrow-left"></span> Retour </button>
-                    <button type="submit" class="btn btn-submit btn-success active" name="send" ><span class="glyphicon glyphicon-ok "></span> Ajouter </button>
+                    <button type="button" class="button" onclick="location.href='../index.php';" ><span class="glyphicon glyphicon-arrow-left"></span> Retour </button>
+                    <button type="submit" class="button2" name="send" ><span class="glyphicon glyphicon-ok "></span> Ajouter </button>
 
                 </form>
             </div>

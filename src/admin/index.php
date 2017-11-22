@@ -34,9 +34,9 @@ include '../config/bdd.php';
                 <h3>Gestion des lignes</h3>
                     <div class="containtable">
 
-                        <a href="insert.php" id="btnadd"class="btn btn-primary "><span class="glyphicon glyphicon-plus"></span> Ajouter une ligne</a>
-                    <!-- Tableau -->
-                         <table class='table table-condensed table-striped '>
+                        <a href="insert.php"class="button"><span class="glyphicon glyphicon-plus"></span> Ajouter une ligne</a>
+                    <!-- Tableau -->                         
+			<table class='table table-condensed table-striped '>
                             <thead>
                             <tr>
                                 <th>Nom ligne</th>
@@ -56,9 +56,9 @@ include '../config/bdd.php';
                                 echo '<td>'.$item['numeroligne'].'</td>';
                                 echo '<td>'.$item['description'].'</td>';
                                 echo '<td width=100>';
-                                echo '<a class="btn btn-primary" href="update.php?id='.$item['id'].'" ><span class="glyphicon glyphicon-pencil"></a>';
+                                echo '<a class="btn button" href="update.php?id='.$item['id'].'" ><span class="glyphicon glyphicon-pencil"></a>';
                                 echo " ";
-                                echo '<a class="btn btn-danger" href="delete.php?id='.$item['id'].'" ><span class="glyphicon glyphicon-remove"></a>';
+                                echo '<a class="btn button" href="delete.php?id='.$item['id'].'" ><span class="glyphicon glyphicon-remove"></a>';
                                 echo '</td>';
                                 echo '</tr>';
                             }
@@ -83,7 +83,7 @@ include '../config/bdd.php';
                     <h3>Gestion des items</h3>
                     <div class="containtable">
 
-                        <a href="items/insert.php" id="btnadd"class="btn btn-primary "><span class="glyphicon glyphicon-plus"></span> Ajouter un items</a>
+                        <a href="items/insert.php" id="btnadd"class="button"><span class="glyphicon glyphicon-plus"></span> Ajouter un items</a>
                         <!-- Tableau -->
                         <table class='table table-condensed table-striped '>
                             <thead>
@@ -109,9 +109,9 @@ include '../config/bdd.php';
                                 echo '<td>'.$item['cheminimage'].'</td>';
                                 echo '<td>'.$item['numeroligne'].'</td>';
                                 echo '<td width=100>';
-                                echo '<a class="btn btn-primary" href="items/update.php?id='.$item['id'].'" ><span class="glyphicon glyphicon-pencil"></a>';
+                                echo '<a class="btn button" href="items/update.php?id='.$item['id'].'" ><span class="glyphicon glyphicon-pencil"></a>';
                                 echo " ";
-                                echo '<a class="btn btn-danger" href="items/delete.php?id='.$item['id'].'" ><span class="glyphicon glyphicon-remove"></a>';
+                                echo '<a class="btn button" href="items/delete.php?id='.$item['id'].'" ><span class="glyphicon glyphicon-remove"></a>';
                                 echo '</td>';
                                 echo '</tr>';
                             }

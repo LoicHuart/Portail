@@ -53,8 +53,8 @@ if(!empty($_POST)) //Si la SUPERGLOBALE POST n'est pas vide
                     <input type="hidden" name="id" value="<?php echo $id; ?>">
                     <!-- btn -->
                     <div id="blocksubb" class="col-md-12 form-group">
-                        <button type="button" class="btn btn-primary active " onclick="location.href='index.php';" ><span class="glyphicon glyphicon-arrow-left"></span> Retour </button>
-                        <button type="submit" class="btn btn-success active" ><span class="glyphicon glyphicon-ok "></span> Oui </button>
+                        <button type="button" class="button" onclick="location.href='index.php';" ><span class="glyphicon glyphicon-arrow-left"></span> Retour </button>
+                        <button type="submit" class="button2" ><span class="glyphicon glyphicon-ok "></span> Oui </button>
                     </div>
 
                 </form>

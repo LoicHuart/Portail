@@ -100,8 +100,8 @@ if(!empty($_POST)){
                         <span class="help-inline"><?php echo $comError; ?> </span>
                     </div>
 
-                    <button type="button" class="btn btn-primary active" onclick="location.href='index.php';" ><span class="glyphicon glyphicon-arrow-left"></span> Retour </button>
-                    <button type="submit" class="btn btn-submit btn-success active" ><span class="glyphicon glyphicon-ok "></span> Modifier </button>
+                    <button type="button" class="button" onclick="location.href='index.php';" ><span class="glyphicon glyphicon-arrow-left"></span> Retour </button>
+                    <button type="submit" class="button2" ><span class="glyphicon glyphicon-ok "></span> Modifier </button>
 
                 </form>
             </div>
