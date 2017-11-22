@@ -42,11 +42,17 @@ if(!empty($_POST)){ // Si la methode POST est utilisé
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
     <title>PORTAIL - INSERT</title>
-    <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="../css/css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/css/bootstrap-theme.min.css" >
 </head>
-
+<header>
+        <div class='wrapper'> 
+             <h1 class="title">PANEL ADMINISTRATEUR</h1>
+             <div class='clear'></div> 
+        </div>
+</header>
+</br>
 <body>
 <div class="bg">
     <div class='container' id="cont1" >

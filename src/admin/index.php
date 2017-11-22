@@ -18,25 +18,25 @@ include '../config/bdd.php';
 
 
 <div id="content">
-
     <header>
-
-
+        <div class='wrapper'> 
+            <div id="retour"><a href="../"><img src="../css/img/back.png" alt= "button retour"></a></div>
+            <h1 class="title">PANEL ADMINISTRATEUR</h1>
+            <div class='clear'></div> 
+        </div>
     </header>
-
+<br/>
     <section id="premiere">
-
         <div class='container'>
             <div class="row ">
                 <div class="col-md-12 table-responsive ">
-                    <h1>PANEL ADMINISTRATEUR</h1>
                     <div class="barre"> </div>
-                    <h3>Gestion des lignes</h3>
+                <h3>Gestion des lignes</h3>
                     <div class="containtable">
 
                         <a href="insert.php" id="btnadd"class="btn btn-primary "><span class="glyphicon glyphicon-plus"></span> Ajouter une ligne</a>
-                        <!-- Tableau -->
-                        <table class='table table-condensed table-striped '>
+                    <!-- Tableau -->
+                         <table class='table table-condensed table-striped '>
                             <thead>
                             <tr>
                                 <th>Nom ligne</th>
@@ -72,7 +72,7 @@ include '../config/bdd.php';
         </div>
 
     </section>
-
+    <br/>
     <section id="deuxieme">
 
         <div class='container'>

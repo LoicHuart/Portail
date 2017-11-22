@@ -23,11 +23,17 @@ if(!empty($_POST)) //Si la SUPERGLOBALE POST n'est pas vide
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
     <title>PORTAIL - DELETE</title>
-    <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="../css/css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/css/bootstrap-theme.min.css" >
 </head>
-
+<header>
+        <div class='wrapper'> 
+             <h1 class="title">PANEL ADMINISTRATEUR</h1>
+             <div class='clear'></div> 
+        </div>
+</header>
+</br>
 <body>
 <div class="bg">
 
@@ -47,7 +53,7 @@ if(!empty($_POST)) //Si la SUPERGLOBALE POST n'est pas vide
                     <input type="hidden" name="id" value="<?php echo $id; ?>">
                     <!-- btn -->
                     <div id="blocksubb" class="col-md-12 form-group">
-                        <button type="button" class="btn btn-primary active" onclick="location.href='index.php';" ><span class="glyphicon glyphicon-arrow-left"></span> Retour </button>
+                        <button type="button" class="btn btn-primary active " onclick="location.href='index.php';" ><span class="glyphicon glyphicon-arrow-left"></span> Retour </button>
                         <button type="submit" class="btn btn-success active" ><span class="glyphicon glyphicon-ok "></span> Oui </button>
                     </div>
 
