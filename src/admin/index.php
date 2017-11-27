@@ -34,7 +34,7 @@ include '../config/bdd.php';
                 <h3>Gestion des lignes</h3>
                     <div class="containtable">
 
-                        <a href="insert.php"class="button"><span class="glyphicon glyphicon-plus"></span> Ajouter une ligne</a>
+                        <a href="insert.php" id="bouton" class="button"><span class="glyphicon glyphicon-plus"></span> Ajouter une ligne</a>
                     <!-- Tableau -->                         
 			<table class='table table-condensed table-striped '>
                             <thead>
@@ -83,7 +83,7 @@ include '../config/bdd.php';
                     <h3>Gestion des items</h3>
                     <div class="containtable">
 
-                        <a href="items/insert.php" id="btnadd"class="button"><span class="glyphicon glyphicon-plus"></span> Ajouter un items</a>
+                        <a href="items/insert.php" id="btnadd" class="button"><span class="glyphicon glyphicon-plus"></span> Ajouter un items</a>
                         <!-- Tableau -->
                         <table class='table table-condensed table-striped '>
                             <thead>
