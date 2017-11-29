@@ -38,15 +38,10 @@ if(!empty($_POST)) //Si la SUPERGLOBALE POST n'est pas vide
 <div class="bg">
 
     <div class='container' id="cont1" >
-        <!-- Entete -->
-        <div class="row">
-            <div class="barre"> </div>
-            <h3>Suppression d'un message</h3>
-        </div>
-
         <!-- bloc de confirmation de suppression -->
         <div class="row">
             <div id='formulaire' class="col-md-12 " >
+                <h3>Suppression d'un message</h3>
                 <form method="POST" role="form" action="delete.php" class="form">
 
                     <p class="alert alert-warning">Êtes-vous sûr de vouloir supprimer ?</p>
