@@ -1,4 +1,0 @@
-AuthName "Page protégée"
-AuthType Basic
-AuthUserFile "/var/www/html/PORAIL/pwd/.htpasswd"
-Require valid-user
