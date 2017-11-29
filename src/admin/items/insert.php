@@ -118,14 +118,10 @@ if(!empty($_POST)){ // Si la methode POST est utilisé
 <body>
 <div class="bg">
     <div class='container' id="cont1" >
-        <!-- Entete -->
-        <div class="row">
-            <h3>Ajout d'un item</h3>
-        </div>
-
         <!-- bloc ajout d'une ligne -->
         <div class="row">
             <div id='formulaire' class="col-md-12 " >
+            	<h3>Ajout d'un item</h3>
                 <form method="POST" role="form" action="insert.php" class="form" enctype="multipart/form-data">
 
                     <!-- champ nom -->

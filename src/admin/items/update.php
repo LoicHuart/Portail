@@ -123,14 +123,10 @@ if (isset($_POST['send']))
 <body>
 <div class="bg">
     <div class='container' id="cont1" >
-        <!-- Entete -->
-        <div class="row">
-            <h3>Modification d'un message</h3>
-        </div>
-
         <!-- bloc du formulaire -->
         <div class="row">
             <div id='formulaire' class="col-md-12 " >
+            	<h3>Modification d'un item</h3>
                 <form method="POST" role="form" action="<?php echo 'update.php?id='.$id; ?>" class="form" enctype="multipart/form-data"> <!-- generation du lien grace a l'id -->
 
                     <!-- champ nom -->

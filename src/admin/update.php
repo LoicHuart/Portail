@@ -72,7 +72,7 @@ if(!empty($_POST)){
         <!-- bloc du formulaire -->
         <div class="row">
             <div id='formulaire' class="col-md-12 " >
-           		<h3>Modification d'un message</h3>
+           		<h3>Modification d'une ligne</h3>
                 <form method="POST" role="form" action="<?php echo 'update.php?id='.$id; ?>" class="form"> <!-- generation du lien grace a l'id -->
                     <!-- champ nom -->
                     <div class="form-group <?php echo $nameError2; ?> ">
