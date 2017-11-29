@@ -18,25 +18,25 @@ include '../config/bdd.php';
 
 
 <div id="content">
-
     <header>
-
-
+        <div class='wrapper'> 
+            <div id="retour"><a href="../"><img src="../css/img/back.png" alt= "button retour"></a></div>
+            <h1 class="title">PANEL ADMINISTRATEUR</h1>
+            <div class='clear'></div> 
+        </div>
     </header>
-
+<br/>
     <section id="premiere">
-
         <div class='container'>
             <div class="row ">
                 <div class="col-md-12 table-responsive ">
-                    <h1>PANEL ADMINISTRATEUR</h1>
                     <div class="barre"> </div>
-                    <h3>Gestion des lignes</h3>
+                <h3>Gestion des lignes</h3>
                     <div class="containtable">
 
-                        <a href="insert.php" id="btnadd"class="btn btn-primary "><span class="glyphicon glyphicon-plus"></span> Ajouter une ligne</a>
-                        <!-- Tableau -->
-                        <table class='table table-condensed table-striped '>
+                        <a href="insert.php" id="bouton" class="button"><span class="glyphicon glyphicon-plus"></span> Ajouter une ligne</a>
+                    <!-- Tableau -->                         
+			<table class='table table-condensed table-striped '>
                             <thead>
                             <tr>
                                 <th>Nom ligne</th>
@@ -56,9 +56,9 @@ include '../config/bdd.php';
                                 echo '<td>'.$item['numeroligne'].'</td>';
                                 echo '<td>'.$item['description'].'</td>';
                                 echo '<td width=100>';
-                                echo '<a class="btn btn-primary" href="update.php?id='.$item['id'].'" ><span class="glyphicon glyphicon-pencil"></a>';
+                                echo '<a class="btn button" href="update.php?id='.$item['id'].'" ><span class="glyphicon glyphicon-pencil"></a>';
                                 echo " ";
-                                echo '<a class="btn btn-danger" href="delete.php?id='.$item['id'].'" ><span class="glyphicon glyphicon-remove"></a>';
+                                echo '<a class="btn button" href="delete.php?id='.$item['id'].'" ><span class="glyphicon glyphicon-remove"></a>';
                                 echo '</td>';
                                 echo '</tr>';
                             }
@@ -72,7 +72,7 @@ include '../config/bdd.php';
         </div>
 
     </section>
-
+    <br/>
     <section id="deuxieme">
 
         <div class='container'>
@@ -83,7 +83,7 @@ include '../config/bdd.php';
                     <h3>Gestion des items</h3>
                     <div class="containtable">
 
-                        <a href="items/insert.php" id="btnadd"class="btn btn-primary "><span class="glyphicon glyphicon-plus"></span> Ajouter un items</a>
+                        <a href="items/insert.php" id="btnadd" class="button"><span class="glyphicon glyphicon-plus"></span> Ajouter un items</a>
                         <!-- Tableau -->
                         <table class='table table-condensed table-striped '>
                             <thead>
@@ -109,9 +109,9 @@ include '../config/bdd.php';
                                 echo '<td>'.$item['cheminimage'].'</td>';
                                 echo '<td>'.$item['numeroligne'].'</td>';
                                 echo '<td width=100>';
-                                echo '<a class="btn btn-primary" href="items/update.php?id='.$item['id'].'" ><span class="glyphicon glyphicon-pencil"></a>';
+                                echo '<a class="btn button" href="items/update.php?id='.$item['id'].'" ><span class="glyphicon glyphicon-pencil"></a>';
                                 echo " ";
-                                echo '<a class="btn btn-danger" href="items/delete.php?id='.$item['id'].'" ><span class="glyphicon glyphicon-remove"></a>';
+                                echo '<a class="btn button" href="items/delete.php?id='.$item['id'].'" ><span class="glyphicon glyphicon-remove"></a>';
                                 echo '</td>';
                                 echo '</tr>';
                             }

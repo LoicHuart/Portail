@@ -1,7 +1,209 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.button {
+    background-color: #424242;
+    border: 1px solid transparent;
+    border-radius:4px;
+    color: white !important;
+    padding: 6px 12px;
+    text-align: center;
+    text-decoration: none !important;
+    display: inline-block;
+    font-size: 14px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer; 
+}
+.button2 {
+    background-color:#4CAF50;
+    border: 1px solid transparent;
+    border-radius:4px;
+    color: white;
+    padding: 6px 12px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer; 
+}
+html, body{
+    height: 100%;
+}
+
+html{
+    width: 100%;
+}
+
+@font-face {
+    font-family: "Antic";
+    src: url('../fonts/Antic-Regular.ttf');
+}
+@font-face {
+    font-family: "julius sans one";
+    src: url('../fonts/JuliusSansOne-Regular.ttf');
+}
+
+#retour {
+    float: left;
+    padding-left: 0px;
+    padding-top: 12px;
+}
+
+#retour > .clear {
+  clear: both;
+  height: 0; overflow: hidden; /* Précaution pour IE 7 */
+}
+
+.wrapper{ /* conteneur permettant de centrer les elements */
+    width: 1200px;
+    margin: 0 auto;
+}
+
+header{ /* BARRE BLANCHE DE DEBUT */
+    height : 70px;
+    background-color: #424242;
+}
+
+.clear{
+    clear: both;
+}
+
+.title{
+  	text-align: center;
+  	color: white;
+  	padding-top: 12px;
+ 	font-family: 'julius sans one', sans-serif;
+ 	font-size: 45px;
+ 	margin-top: 0;
+}
+
 .container{
 	-moz-border-radius: 10px;
 	-webkit-border-radius: 10px;
 	border-radius: 10px;
 	border color: #E6E6E6;
 	background-color: #E6E6E6;
+}
+
+@media screen and (max-width: 1290px) {
+    .item{
+        width: 170px;
+    }
+    .wrapper{ /* CONTENEUR PERMETTANT DE CENTRER LES ELEMENT*/
+        width: 900px;
+    }
+    .per{ /* TEXTE EN DESSOUS DES GROS TITRE ET AVEC UNE BARRE */
+        width: 900px;
+    }
+    .item  h4{
+        padding-top: 62px;
+    }
+}
+
+/* < 915PX --------------------------------------------- */
+
+@media screen and (max-width: 990px) {
+
+    .wrapper{ /* CONTENEUR PERMETTANT DE CENTRER LES ELEMENT*/
+        width: 600px;
+    }
+    .per{ /* TEXTE EN DESSOUS DES GROS TITRE ET AVEC UNE BARRE */
+        border: none;
+        padding-bottom: 20px;
+        width: 600px;
+    }
+    p{
+        font-size: 13px;
+    }
+    .sidebar h2{ /* texte dans la barre laterale */
+        margin: 15px;
+
+    }
+    .sidebar p{ /* texte dans la barre laterale */
+
+        margin: 15px;
+        font-size: 11px;
+    }
+    .item  h4{
+        padding-top: 77px;
+
+    }
+    .item{
+        width: 200px;
+    }
+    .title{
+        font-size: 35px;
+    }
+}
+
+/* < 625PX --------------------------------------------- */
+
+@media screen and (max-width: 665px) {
+    .section{
+        font-size: 15px;
+    }
+
+    .wrapper{ /* CONTENEUR PERMETTANT DE CENTRER LES ELEMENT*/
+        width: 480px;
+    }
+    .per{ /* TEXTE EN DESSOUS DES GROS TITRE ET AVEC UNE BARRE */
+        border: none;
+        padding-bottom: 20px;
+        width: 410px;
+    }
+    p{
+        font-size: 13px;
+    }
+    .title{
+        font-size: 30px;
+    }
+}
+
+/* < 500PX --------------------------------------------- */
+
+@media screen and (max-width: 570px) {
+
+    .item { /* element du carousel */
+        width: 150px;
+    }
+    .item h4{ /* element du carousel */
+        padding-top: 55px;
+        font-size: 20px;
+    }
+    .wrapper{ /* CONTENEUR PERMETTANT DE CENTRER LES ELEMENTS*/
+        width: 320px;
+    }
+    .per{ /* TEXTE EN DESSOUS DES GROS TITRE ET AVEC UNE BARRE */
+        padding-bottom: 10px;
+        width: 200px;
+    }
+    .p1, .p2{
+        float: none;
+    }
+    p{
+        font-size: 13px;
+    }
+    .overlay p{
+        display:block;
+    }
+    #mongei{
+        display:none;
+    }
+    .title{
+        font-size: 25px;
+    }
+
+
+
+
+
+
+
+
+
 }

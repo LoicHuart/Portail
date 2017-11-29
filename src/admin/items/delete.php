@@ -23,32 +23,33 @@ if(!empty($_POST)) //Si la SUPERGLOBALE POST n'est pas vide
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
     <title>PORTAIL - DELETE</title>
-    <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../../css/css/bootstrap.min.css">
     <link rel="stylesheet" href="../../css/css/bootstrap-theme.min.css" >
 </head>
-
+<header>
+        <div class='wrapper'> 
+             <h1 class="title">PANEL ADMINISTRATEUR</h1>
+             <div class='clear'></div> 
+        </div>
+</header>
+</br>
 <body>
 <div class="bg">
 
     <div class='container' id="cont1" >
-        <!-- Entete -->
-        <div class="row">
-            <div class="barre"> </div>
-            <h3>Suppression d'un items</h3>
-        </div>
-
         <!-- bloc de confirmation de suppression -->
         <div class="row">
             <div id='formulaire' class="col-md-12 " >
+            	<h3>Suppression d'un item</h3>
                 <form method="POST" role="form" action="delete.php" class="form">
 
                     <p class="alert alert-warning">Êtes-vous sûr de vouloir supprimer ?</p>
                     <input type="hidden" name="id" value="<?php echo $id; ?>">
                     <!-- btn -->
                     <div id="blocksubb" class="col-md-12 form-group">
-                        <button type="button" class="btn btn-primary active" onclick="location.href='../index.php';" ><span class="glyphicon glyphicon-arrow-left"></span> Retour </button>
-                        <button type="submit" class="btn btn-success active" ><span class="glyphicon glyphicon-ok "></span> Oui </button>
+                        <button type="button" class="button" onclick="location.href='../index.php';" ><span class="glyphicon glyphicon-arrow-left"></span> Retour </button>
+                        <button type="submit" class="button2" ><span class="glyphicon glyphicon-ok "></span> Oui </button>
                     </div>
 
                 </form>

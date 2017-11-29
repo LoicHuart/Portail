@@ -104,22 +104,24 @@ if(!empty($_POST)){ // Si la methode POST est utilisé
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8">
     <title>PORTAIL - INSERT</title>
-    <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../../css/css/bootstrap.min.css">
     <link rel="stylesheet" href="../../css/css/bootstrap-theme.min.css" >
 </head>
-
+<header>
+        <div class='wrapper'> 
+             <h1 class="title">PANEL ADMINISTRATEUR</h1>
+             <div class='clear'></div> 
+        </div>
+</header>
+</br>
 <body>
 <div class="bg">
     <div class='container' id="cont1" >
-        <!-- Entete -->
-        <div class="row">
-            <h3>Ajout d'un item</h3>
-        </div>
-
         <!-- bloc ajout d'une ligne -->
         <div class="row">
             <div id='formulaire' class="col-md-12 " >
+            	<h3>Ajout d'un item</h3>
                 <form method="POST" role="form" action="insert.php" class="form" enctype="multipart/form-data">
 
                     <!-- champ nom -->
@@ -162,8 +164,8 @@ if(!empty($_POST)){ // Si la methode POST est utilisé
                         <span id="helpBlock" class="help-block">Numero de ligne a laquelle l'item est affecté. </span>
                     </div>
 
-                    <button type="button" class="btn btn-primary active" onclick="location.href='../index.php';" ><span class="glyphicon glyphicon-arrow-left"></span> Retour </button>
-                    <button type="submit" class="btn btn-submit btn-success active" name="send" ><span class="glyphicon glyphicon-ok "></span> Ajouter </button>
+                    <button type="button" class="button" onclick="location.href='../index.php';" ><span class="glyphicon glyphicon-arrow-left"></span> Retour </button>
+                    <button type="submit" class="button2" name="send" ><span class="glyphicon glyphicon-ok "></span> Ajouter </button>
 
                 </form>
             </div>
