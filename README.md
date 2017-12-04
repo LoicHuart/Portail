@@ -42,4 +42,6 @@ Site web developpé dans le cadre d'un projet collaboratif dans l'enceinte du ly
 # ISSUES
 
 1. Si l'image ne s'upload pas, voir avec les droit du dossier src/css/img/cate.
+
+2. Si erreur 500, changer le chemin dans src/admin/.htaccess .
     
