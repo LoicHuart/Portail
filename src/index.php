@@ -56,14 +56,12 @@ include 'config/bdd.php';
             <?php
                 }
                 $reponseitems->closeCursor(); // Termine le traitement de la requête des items
-                
             ?>
 
             </div>
         </section>
     <?php
         }
-        $reponseligne->closeCursor();// Termine le traitement de la requête des lignes
 
     ?>
     <!-- Add libraries -->
