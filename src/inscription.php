@@ -8,26 +8,20 @@ $errormessage = "";
 
 if(!empty($_POST)){
 
-    if(!empty($_POST['user']) && !empty($_POST['password']) && !empty($_POST['captcha'])){
-
-        if($_POST['captcha'] == $_SESSION['captcha']){
+    if(!empty($_POST['user']) && !empty($_POST['password'])){
 
             $Connexion = new Connexion_test($bdd);
 
-            $return = $Connexion->CheckConnexion($_POST['user'], $_POST['password']);
+            $return = $Connexion->Inscription($_POST['user'], $_POST['password']);
 
             if($return == "ok"){
-                $errormessage = "<div class=\"alert alert-success\" role=\"alert\">Bonjour ".$_POST['user'].", vous allez etre redirigé</div>";
+                $errormessage = "<div class=\"alert alert-success\" role=\"alert\">Merci pour votre inscription ".$_POST['user'].", vous allez etre redirigé</div>";
                 $Connexion->setName($_POST['user']);
                 $Connexion->GetConnected();
-                header("refresh:3;url=admin/index.php");
+                header("Location= admin/index.php");
             }else{
-                $errormessage = "<div class=\"alert alert-danger\" role=\"alert\">identifiant ou mot de passe incorrect</div>";;
+                $errormessage = "<div class=\"alert alert-danger\" role=\"alert\">identifiant deja pris</div>";;
             }
-        }else{
-            $errormessage = "<div class=\"alert alert-danger\" style=\"alert\">Captcha incorrect</div>";;
-        }
-
 
     }else{
         $errormessage = "<div class=\"alert alert-danger\" role=\"alert\">Veuillez remplir tout les champs</div>";;
@@ -66,7 +60,7 @@ function captcha()
 
     <header>
         <div class="wrapper">
-            <a href="index.php"><h1 class='MainTitle'>Connexion a PORTAIL</h1></a>
+            <a href="index.php"><h1 class='MainTitle'>INSCRIPTION a PORTAIL</h1></a>
             <div class='clear'></div>
         </div>
     </header>
@@ -77,7 +71,7 @@ function captcha()
                 <div class="connexion-ctn">
                     <div class="connexion-window">
 
-                        <form method="post" action="connexion.php">
+                        <form method="post" action="inscription.php">
                             <div class="form-group">
                                 <label>Nom d'utilisateur</label><br>
                                 <input type="text" name="user" class="form-control"><br/>
@@ -86,11 +80,6 @@ function captcha()
                             <div class="form-group">
                                 <label>Mot de passe</label><br>
                                 <input type="password" name="password" class="form-control"><br/>
-                            </div>
-
-                            <div class="form-group">
-                                <label>Recopiez le mot :  <?php echo captcha(); ?></label><br>
-                                <input type="text" name="captcha" id="captcha" class="form-control"><br/>
                             </div>
 
                             <div class="text-center">

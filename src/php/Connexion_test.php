@@ -30,6 +30,8 @@ class Connexion_test
         $mdp = stripslashes($mdp1);
         $mdp = htmlspecialchars($mdp1);
 
+        //$mdp = hash("md5", $mdp); // activer si cryptage mdp
+
         $sql = 'SELECT * from `identifiants` where `user` = "'.$user.'" AND `mdp` = "'.$mdp.'"';
 
         $sql_temp = $this->db->query($sql);
@@ -67,9 +69,9 @@ class Connexion_test
         $mdp = stripslashes($mdp);
         $mdp = htmlspecialchars($mdp);
 
-       // if (!preg_match("#^[a-z0-9._-]#i", $user)){}
+       // if (preg_match("#^[a-z0-9._-]#i", $user)){}
+        //$mdp = hash("md5", $mdp); // activer si cryptage mdp
 
-        //$mdp = hash("md5", $mdp);
         $sql_pre = "SELECT count(user) AS E FROM identifiants where user = '".$user."'";
 
         $sql_pre1 = $this->db->query($sql_pre);

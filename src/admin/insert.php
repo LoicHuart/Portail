@@ -1,6 +1,11 @@
 <?php
-
+session_start();
 include '../config/bdd.php';
+
+/* Check Si la personne est connecté */
+if(!isset($_SESSION['IsConnected']) || $_SESSION['IsConnected'] != 1){
+    header('Location: ../connexion.php');
+}
 
 $name = $nameError = $nameError2 = $compl = $complError = $complError2 = $sql = $com = $comError = $comError2 = "";
 

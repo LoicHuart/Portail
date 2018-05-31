@@ -1,10 +1,18 @@
 <?php
 session_start();
 include '../config/bdd.php';
+include '../php/connexion_test.php';
 
 /* Check Si la personne est connecté */
 if(!isset($_SESSION['IsConnected']) || $_SESSION['IsConnected'] != 1){
     header('Location: ../connexion.php');
+}
+
+if(isset($_GET['discon']) && $_GET['discon'] == "y"){
+
+    $Connexion = new Connexion_test($bdd);
+    $Connexion->GetDisconnected();
+    header('Location: ../index.php');
 }
 
 ?>
@@ -28,7 +36,7 @@ if(!isset($_SESSION['IsConnected']) || $_SESSION['IsConnected'] != 1){
     <header>
         <div class='wrapper'> 
             <div id="retour"><a href="../"><img src="../css/img/back.png" alt= "button retour"></a></div>
-            <div id="disconnect"><a href="../"><img src="../css/img/back.png" alt="button retour"></a></div>
+            <div id="disconnect"><a href="index.php?discon=y"><img src="../css/img/menu.png" alt="button disconnect"></a></div>
             <h1 class="title">PANEL ADMINISTRATEUR</h1>
 
             <div class='clear'></div> 
