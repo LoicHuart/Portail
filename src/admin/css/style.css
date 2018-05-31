@@ -59,6 +59,17 @@ html{
   height: 0; overflow: hidden; /* Précaution pour IE 7 */
 }
 
+#disconnect {
+    float: right;
+    padding-left: 0px;
+    padding-top: 12px;
+}
+
+#disconnect > .clear {
+    clear: both;
+    height: 0; overflow: hidden; /* Précaution pour IE 7 */
+}
+
 .wrapper{ /* conteneur permettant de centrer les elements */
     width: 1200px;
     margin: 0 auto;
@@ -86,7 +97,7 @@ header{ /* BARRE BLANCHE DE DEBUT */
 	-moz-border-radius: 10px;
 	-webkit-border-radius: 10px;
 	border-radius: 10px;
-	border color: #E6E6E6;
+	border-color: #E6E6E6;
 	background-color: #E6E6E6;
 }
 
@@ -198,12 +209,10 @@ header{ /* BARRE BLANCHE DE DEBUT */
         font-size: 25px;
     }
 
+}
 
-
-
-
-
-
-
-
+.alert alert-danger{
+    margin-top: 20px;
+    background-color: #ffb8af;
+    padding:10px 40px;
 }

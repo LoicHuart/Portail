@@ -274,3 +274,49 @@ p{
         display:none;
     }
 }
+
+.alert-success{
+    margin-top: 20px;
+    background-color: #c5ffbb;
+    width: 100%;
+    height: 20px;
+    padding: 6px 12px;
+    border-radius:3px;
+}
+.alert-danger{
+    margin-top: 20px;
+    background-color: #ffb8af;
+    width: 100%;
+    height: 20px;
+    padding: 6px 12px;
+    border-radius:3px;
+}
+.form-control{
+    display: block;
+    width: 100%;
+    height: 13px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.button1{
+    padding: 7px 30px;
+    background-color: #777;
+    color:white;
+    border:0px;
+    border-radius:15px;
+}
+.form-group label{
+    font-size: 22px;
+}
+
+.connexion-ctn{
+    width:50%;
+    margin: 0 auto;
+}

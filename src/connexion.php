@@ -4,6 +4,8 @@ session_start();
 include 'config/bdd.php';
 include 'php/connexion_test.php';
 
+$errormessage = "";
+
 if(!empty($_POST)){
 
     if(!empty($_POST['user']) && !empty($_POST['password']) && !empty($_POST['captcha'])){
@@ -18,12 +20,12 @@ if(!empty($_POST)){
                 $errormessage = "<div class=\"alert alert-success\" role=\"alert\">Bonjour ".$_POST['user'].", vous allez etre redirigé</div>";
                 $Connexion->setName($_POST['user']);
                 $Connexion->GetConnected();
-                header("refresh:3;url=index.php");
+                header("refresh:3;url=admin/index.php");
             }else{
                 $errormessage = "<div class=\"alert alert-danger\" role=\"alert\">identifiant ou mot de passe incorrect</div>";;
             }
         }else{
-            $errormessage = "<div class=\"alert alert-danger\" role=\"alert\">Captcha incorrect</div>";;
+            $errormessage = "<div class=\"alert alert-danger\" style=\"alert\">Captcha incorrect</div>";;
         }
 
 
@@ -55,6 +57,8 @@ function captcha()
     <link rel="stylesheet" href="css/style.css">
     <meta name="viewport" content="width=device-width" />
     <link href="https://fonts.googleapis.com/css?family=Antic|Julius+Sans+One|" rel="stylesheet">
+    <link rel="stylesheet" href="css/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/css/bootstrap-theme.min.css" >
     <title>PORTAIL</title>
 </head>
 <body>
@@ -74,25 +78,25 @@ function captcha()
             <div class="wrapper">
                 <div class="connexion-ctn">
                     <div class="connexion-window">
-                        <h3 class="text-center">Connexion</h3>
+
                         <form method="post" action="connexion.php">
                             <div class="form-group">
-                                Nom d'utilisateur :<br>
-                                <input type="text" name="user" class="form-control">
+                                <label>Nom d'utilisateur</label><br>
+                                <input type="text" name="user" class="form-control"><br/>
                             </div>
 
                             <div class="form-group">
-                                Mot de passe:<br>
-                                <input type="password" name="password" class="form-control">
+                                <label>Mot de passe</label><br>
+                                <input type="password" name="password" class="form-control"><br/>
                             </div>
 
                             <div class="form-group">
-                                Recopiez le mot: <?php echo captcha(); ?><br>
-                                <input type="text" name="captcha" id="captcha" class="form-control"><br>
+                                <label>Recopiez le mot :  <?php echo captcha(); ?></label><br>
+                                <input type="text" name="captcha" id="captcha" class="form-control"><br/>
                             </div>
 
                             <div class="text-center">
-                                <input type="submit" value="Connexion" class="btn">
+                                <input type="submit" value="Connexion" class="button1">
                             </div>
 
                             <div class="message-wrapper">

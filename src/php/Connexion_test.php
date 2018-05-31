@@ -30,7 +30,7 @@ class Connexion_test
         $mdp = stripslashes($mdp1);
         $mdp = htmlspecialchars($mdp1);
 
-        $sql = 'SELECT * from `users` where `user` = "'.$user.'" AND `password` = "'.$mdp.'"';
+        $sql = 'SELECT * from `identifiants` where `user` = "'.$user.'" AND `mdp` = "'.$mdp.'"';
 
         $sql_temp = $this->db->query($sql);
 
@@ -70,7 +70,7 @@ class Connexion_test
        // if (!preg_match("#^[a-z0-9._-]#i", $user)){}
 
         //$mdp = hash("md5", $mdp);
-        $sql_pre = "SELECT count(user) AS E FROM users where user = '".$user."'";
+        $sql_pre = "SELECT count(user) AS E FROM identifiants where user = '".$user."'";
 
         $sql_pre1 = $this->db->query($sql_pre);
 
@@ -78,7 +78,7 @@ class Connexion_test
 
         if($sql_pre2["E"] == 0){
 
-            $sql = 'INSERT INTO `users` (`user`, `password`) VALUES ("'.$user.'","'.$mdp.'")';
+            $sql = 'INSERT INTO `identifiants` (`user`, `mdp`) VALUES ("'.$user.'","'.$mdp.'")';
 
             $sql_temp = $this->db->query($sql);
 
