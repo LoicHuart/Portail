@@ -10,7 +10,7 @@ if(!empty($_POST)){
 
         if($_POST['captcha'] == $_SESSION['captcha']){
 
-            $Connexion = new Connexion_test($db);
+            $Connexion = new Connexion_test($bdd);
 
             $return = $Connexion->CheckConnexion($_POST['user'], $_POST['password']);
 
