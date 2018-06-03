@@ -37,7 +37,7 @@ CREATE TABLE `identifiants` (
 --
 
 INSERT INTO `identifiants` (`id`, `user`, `mdp`) VALUES
-(1, 'admin', 'admin');
+(1, 'root', 'root');
 
 -- --------------------------------------------------------
 
@@ -60,14 +60,14 @@ CREATE TABLE `portail_items` (
 
 INSERT INTO `portail_items` (`id`, `nom`, `nomid`, `lienhttp`, `cheminimage`, `numeroligne`) VALUES
 (1, 'ENT', 'ent', 'https://www.ent-lycees.fr/', 'css/img/cate/ent.png', 1),
-(2, 'PRONOTE', 'pronote', 'http://pronote.lyceemonge.eu/', 'css/img/cate/pro.png', 1),
+(2, 'PRONOTE', 'pronote', 'http://pronote.lyceemonge.eu/', 'css/img/cate/pronote.png', 1),
 (3, 'CNAM', 'cnam', 'https://lecnam.net/', 'css/img/cate/cnam.png', 1),
 (4, 'SIO OVH', 'ovh', 'http://ovh.infomonge.net/', 'css/img/cate/ovh.png', 1),
 (5, 'GITLAB', 'git', 'https://portail.infomonge.net/gitlab', 'css/img/cate/git.png', 2),
 (6, 'MOODLE', 'mood', 'https://portail.infomonge.net/moodle', 'css/img/cate/mood.png', 2),
 (7, 'SLAM', 'slam', 'https://portail.infomonge.net/slam', 'css/img/cate/slam.png', 2),
 (8, 'NODE', 'node', 'https://portail.infomonge.net/node', 'css/img/cate/node.png', 2),
-(9, 'ROULETTE', 'roule', 'https://portail.infomonge.net/ROULETTE', 'css/img/cate/roule.png', 2),
+(9, 'ROULETTE', 'roule', 'https://portail.infomonge.net/ROULETTE', 'css/img/cate/roulette.png', 2),
 (10, 'AFFICHAGE', 'aff', 'https://portail.infomonge.net/aff', 'css/img/cate/aff.png', 3),
 (11, 'SIG', 'sig', 'https://portail.infomonge.net/sig', 'css/img/cate/sig.png', 3),
 (12, 'GLPI', 'glpi', 'https://portail.infomonge.net/glpi', 'css/img/cate/glpi.png', 3),

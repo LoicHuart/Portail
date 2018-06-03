@@ -44,7 +44,6 @@ class Connexion_test
         }else{
             return 'ok';
         }
-
     }
 
     public function GetConnected(){
