@@ -2,7 +2,7 @@
 session_start();
 
 include 'config/bdd.php';
-include 'php/connexion_test.php';
+include 'php/Connexion_test.php';
 
 $errormessage = "";
 
