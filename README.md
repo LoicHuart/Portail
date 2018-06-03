@@ -22,11 +22,10 @@ Site web developpé dans le cadre d'un projet collaboratif dans l'enceinte du ly
 
 # UTILISATION 
 
-1. L'acces au panel administrateur se fait via "portail.infomonge.net/admin".
+1. L'acces au panel administrateur se fait via "YourDomain/admin".
+    (et non pas "YourDomain/index.php/admin")
 
-2. L'acces est proteger par un .htaccess avec les identifiants par defaut admin:admin.
-
-3. Les identifiants peuvent etre modifier/ajouter dans le fichier .htpasswd via la convention user:password, le password doit etre crypté via la methode CRYPT (c.f google).
+2. L'acces est proteger par un portail d'authentification avec les identifiants par defaut root:root.
 
 4. Le panel administrateur dispose de 2 tableau : 
 
@@ -35,13 +34,13 @@ Site web developpé dans le cadre d'un projet collaboratif dans l'enceinte du ly
           
     4.2 - Le premier tableau "ajout d'un item" permet la modification/ajout d'un item/service dans le panel                     administrateur.
     
-    4.3 - Les deux boutons à droite permettent de modifier/supprimer un item/ligne.
+    4.3 - Les deux boutons à droite permettent respectivement de modifier/supprimer un item/ligne.
     
 5. Si modification du "nom id" d'un item, veuillez re-uploader l'image.
 
 # ISSUES
 
-1. Si l'image ne s'upload pas, voir avec les droit du dossier src/css/img/cate.
-
-2. Si erreur 500, changer le chemin dans src/admin/.htaccess .
+1. Si l'image ne s'upload pas, cela vient surement d'un problème avec les droit du dossier src/css/img/cate. 
+    - executez la commande suivante : "chmod -R 777 cate"
+    
     
