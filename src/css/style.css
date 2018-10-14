@@ -17,8 +17,17 @@ body{
     background-color: #E6E6E6;
 }
 #content{ /* TOUT LE CONTENU DU SITE */
-    display:none;
+  
 
+}
+
+@font-face {
+    font-family: "Antic";
+    src: url('../fonts/Antic-Regular.ttf');
+}
+@font-face {
+    font-family: "julius sans one";
+    src: url('../fonts/JuliusSansOne-Regular.ttf');
 }
 .section{ /* DIV PRINCIPALE DU LOADING SCREEN */
     position: relative;
@@ -78,51 +87,8 @@ ul{
     color: white;
     font-size: 25px;
     text-transform: uppercase;
-    font-family: 'Julius sans one' ,'sans-serif';
+    font-family: 'julius sans one' ,'sans-serif';
 }
-
-/* LOADING --------------------------------------------- */
-
-
-.center-v{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translateY(-50%) translateX(-50%);
-}
-
-.loader-quart{
-    position:relative;
-    width:50px;
-    height:50px;
-    display: inline-block;
-    border-radius: 50px;
-    border: 6px solid rgba(255,255,255,0.4);
-    vertical-align: middle;
-}
-
-.loader-quart:after{
-    position:absolute;
-    top: -6px;
-    left: -6px;
-    bottom: -6px;
-    right: -6px;
-    content:'';
-    display: inline-block;
-    border-radius: 50px;
-    border: 6px solid transparent;
-    border-top-color: #fff;
-    vertical-align: middle;
-    animation:spin 1s linear infinite;
-    -moz-animation:spin 1s linear infinite ;
-    -webkit-animation:spin 1s linear infinite ;
-}
-
-@keyframes spin{
-    0% { -webkit-transform: rotate(0deg); }
-    100% { -webkit-transform: rotate(360deg); }
-}
-
 
 /* HEADER --------------------------------------------- */
 
@@ -131,7 +97,7 @@ header{ /* BARRE BLANCHE DE DEBUT */
     background-color: #424242;
 }
 .MainTitle{  /* titre principale du site (en haut a gauche) */
-    float: left;
+  text-align: center;
 }
 #menu{ /* icone en haut a droite (3 petites barres) */
     float:right;
@@ -192,80 +158,23 @@ p{
     background-color: #E6E6E6;
 }
 
-/* PREMIERE --------------------------------------------- */
-#premiere{
+/* LIGNE --------------------------------------------- */
+.ligne{
     text-align: center;
     padding: 20px;
+}
+
+.ligne:nth-child(odd) { /*MET LA PREMIERE LIGNE D'UNE COULEUR*/
     background-color: #F2F2F2;
 }
-#ent{ /* PREMEIRE ELEMENT (ENT) */
-    background: url('img/cate/ent.png') no-repeat top center;
-    background-size: 100%;
-}
-#pronote{ /* DEUXIEME ELEMENT (PRONOTE) */
-    background: url('img/cate/pro.png') no-repeat top center;
-    background-size: 100%;
-}
-#cnam{
-    background: url('img/cate/cnam.png') no-repeat top center;
-    background-size: 100%;
-}
-#ovh{
-    background: url('img/cate/ovh.png') no-repeat top center;
-    background-size: 100%;
-}
+#contact{
+     background: url('../doc/img/cate/contact.png') no-repeat top center;
+     background-size: 100%;
+ }
 
-/* DEUXIEME --------------------------------------------- */
-
-#deuxieme{
-
-    text-align: center;
-    padding: 20px;
+.ligne:nth-child(even) { /*MET LA DEUXIEME LIGNE D'UNE AUTRE COULEUR */
     background-color: #E6E6E6;
 }
-#mood{
-    background: url('img/cate/mood.png') no-repeat top center;
-    background-size: 100%;
-}
-#git{
-    background: url('img/cate/git.png') no-repeat top center;
-    background-size: 100%;
-}
-#slam{
-    background: url('img/cate/slam.png') no-repeat top center;
-    background-size: 100%;
-}
-#node{
-    background: url('img/cate/node.png') no-repeat top center;
-    background-size: 100%;
-}
-#roule{
-    background: url('img/cate/roule.png') no-repeat top center;
-    background-size: 100%;
-}
-
-/* troisieme --------------------------------------------- */
-
-#troisieme{
-
-    padding: 20px;
-    text-align: center;
-    background-color: #F2F2F2;
-
-}
-#glpi{
-    background: url('img/cate/glpi.png') no-repeat top center;
-    background-size: 100%;
-}
-#aff{
-    background: url('img/cate/aff.png') no-repeat top center;
-    background-size: 100%;
-}
-#sig{
-    background: url('img/cate/sig.png') no-repeat top center;
-    background-size: 100%;
-}
-
 
 /* RESPONSIVE */
 /* < 1097PX --------------------------------------------- */
@@ -368,4 +277,50 @@ p{
     #mongei{
         display:none;
     }
+}
+
+.alert-success{
+    margin-top: 20px;
+    background-color: #c5ffbb;
+    width: 100%;
+    height: 20px;
+    padding: 6px 12px;
+    border-radius:3px;
+}
+.alert-danger{
+    margin-top: 20px;
+    background-color: #ffb8af;
+    width: 100%;
+    height: 20px;
+    padding: 6px 12px;
+    border-radius:3px;
+}
+.form-control{
+    display: block;
+    width: 100%;
+    height: 13px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.button1{
+    padding: 7px 30px;
+    background-color: #777;
+    color:white;
+    border:0px;
+    border-radius:15px;
+}
+.form-group label{
+    font-size: 22px;
+}
+
+.connexion-ctn{
+    width:50%;
+    margin: 0 auto;
 }
