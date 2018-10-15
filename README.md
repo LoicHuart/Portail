@@ -16,7 +16,7 @@ Site web developpé dans le cadre d'un projet collaboratif dans l'enceinte du ly
 
 4. Ajouter vos ID de connexion de MYSQL dans le fichier.
 
-5. Importer la base de données SRC/data/portail_monge.SQL dans une base de données nommée portail_monge.
+5. Importer la base de données SRC/data/portail.sql dans une base de données nommée PORTAIL.
 
 6. Donner les droits d'acces 777 sur le dossier src/css/img/cate avec recursivité.
 
@@ -30,8 +30,8 @@ Site web developpé dans le cadre d'un projet collaboratif dans l'enceinte du ly
 4. Le panel administrateur dispose de 2 tableau : 
 
     4.1 - Le premier tableau "ajout d'une ligne" permet la modification/ajout de ligne dans le panel administrateur.
-          Le panel est actuellement composé de 3 lignes par defaut.
-          
+    ​      Le panel est actuellement composé de 3 lignes par defaut.
+    ​      
     4.2 - Le premier tableau "ajout d'un item" permet la modification/ajout d'un item/service dans le panel                     administrateur.
     
     4.3 - Les deux boutons à droite permettent respectivement de modifier/supprimer un item/ligne.
@@ -42,5 +42,3 @@ Site web developpé dans le cadre d'un projet collaboratif dans l'enceinte du ly
 
 1. Si l'image ne s'upload pas, cela vient surement d'un problème avec les droit du dossier src/css/img/cate. 
     - executez la commande suivante : "chmod -R 777 cate"
-    
-    
