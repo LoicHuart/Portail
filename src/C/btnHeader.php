@@ -19,6 +19,7 @@ if ((isset($_SESSION["login"]))&&($_SESSION["login"]=="root")&&(isset($_POST['Bt
     echo    "<form action='#' method='post' enctype='multipart/form-data'>";
     echo        "<p>Nom :</p><input type='text' name='nom' >";
     echo        "<p>Lien Http :</p><input type='text' name='lienhttp' >";
+    echo        "<p>ReverseProxy (remplir ce champ uniquement il y en a besoin):</p><input type='text' name='ReverseProxy' value=''>";
     echo        "<p>Numero de Ligne :</p><input type='text' name='numeroligne' >";
     echo        "<p>Position dans la ligne :</p><input type='text' name='positionInLigne' >";
 
@@ -43,11 +44,16 @@ if ((isset($_SESSION["login"]))&&($_SESSION["login"]=="root")&&(isset($_POST['va
         if ($filesize < 300000)
         {
             $newfilename =  $_POST['nom'] . ".png";
-            
             if (move_uploaded_file($_FILES["file"]["tmp_name"],"css/img/cate/" . $newfilename));
             {
                 resize_crop_image(200, 120, "css/img/cate/" . $newfilename, "css/img/cate/" . $newfilename);
-                $manager->insertItem($_POST['nom'],$_POST['lienhttp'],$_POST['numeroligne'],$_POST['positionInLigne']);
+
+                if(!empty($_POST['ReverseProxy'])){
+                    $manager->ajoutReverseProxy($_POST['lienhttp'],$_POST['ReverseProxy']);
+                    $manager->insertItem($_POST['nom'],$_POST['lienhttp'],$_POST['numeroligne'],$_POST['positionInLigne'],$_POST['ReverseProxy']);
+                }else{
+                    $manager->insertItem($_POST['nom'],$_POST['lienhttp'],$_POST['numeroligne'],$_POST['positionInLigne'],"");
+                }
             }
         }
         elseif ($filesize > 300000)

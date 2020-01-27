@@ -3,15 +3,13 @@ session_start();
 include 'M/manager.php';
 
 $manager = new manager;
-$manager->connectBDD('PORTAIL','root','root');
+$manager->connectBDD('portail','root','btssio');
 $manager->getLigneBDD();
 $manager->getItemBDD();
 include 'C/functionResizeImage.php';
 include 'C/btnHeader.php';
 include 'C/btnItem.php';
 include 'C/btnLigne.php';
-
-
 ?>
 <!DOCTYPE html>
 <html>
