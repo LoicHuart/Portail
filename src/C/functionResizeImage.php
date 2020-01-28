@@ -1,14 +1,5 @@
 <?php
-function convertImage($source, $dst, $width, $height, $quality){
-    $imageSize = getimagesize($source) ;
-    $imageRessource= imagecreatefromjpeg($source) ;
-    $imageFinal = imagecreatetruecolor($width, $height) ;
-    $final = imagecopyresampled($imageFinal, $imageRessource, 0,0,0,0, $width, $height, $imageSize[0], $imageSize[1]) ;
-    imagejpeg($imageFinal, $dst, $quality) ;
-  } 
-
-
-  function resize_crop_image($max_width, $max_height, $source_file, $dst_dir, $quality = 80){
+function resize_crop_image($max_width, $max_height, $source_file, $dst_dir, $quality = 80){
     $imgsize = getimagesize($source_file);
     $width = $imgsize[0];
     $height = $imgsize[1];

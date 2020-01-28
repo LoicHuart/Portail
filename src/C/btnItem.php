@@ -4,22 +4,7 @@
 if ((isset($_SESSION["login"]))&&($_SESSION["login"]=="root")&&(isset($_POST['modifyItem']))) {   
     foreach($manager->getItem() as $donneesitems){
         if($donneesitems['id'] === $_POST['id']){
-            
-            echo "<div class='modify'>";
-            echo    "<h1>Modifier un Item</h1>"; 
-            echo    "<form action='#' method='post' enctype='multipart/form-data'>";
-            echo        "<input type='hidden' name='id' value=".$_POST['id'].">";
-            echo        "<input type='hidden' name='cheminimage' value=".$donneesitems['cheminimage'].">";
-            echo        "<p>Nom :</p><input type='text' name='nom' value=".$donneesitems['nom'].">";
-            echo        "<p>Lien Http :</p><input type='text' name='lienhttp' value=".$donneesitems['lienhttp'].">";
-            echo        "<p>ReverseProxy (remplir ce champ uniquement il y en a besoin):</p><input type='text' name='ReverseProxy' value=".$donneesitems['reverseProxy'].">";
-            echo        "<p>Numero de Ligne :</p><input type='text' name='numeroligne' value=".$donneesitems['numeroligne'].">";
-            echo        "<p>Image :</p><img src=".$donneesitems['cheminimage']."><input type='file' name='file' accept='image/png,'image/jpg, image/jpeg'>";
-            echo        "<button type='submit' name='valideModify' submit>valider</button>";
-
-            echo        "<button type='submit' name='closeModify' submit>close</button>";         
-            echo    "</form>";
-            echo "</div>";   
+            require "./V/popupModifyItem.php";   
         }
     }
 }
@@ -68,8 +53,6 @@ if ((isset($_SESSION["login"]))&&($_SESSION["login"]=="root")&&(isset($_POST['de
             unlink($donneesitems['cheminimage']);
 
             $manager->suppReverseProxy($_POST['id']);
-
-
             $manager->deleteItem($_POST['id']);
         }
     }

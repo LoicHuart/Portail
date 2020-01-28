@@ -3,7 +3,7 @@ session_start();
 include 'M/manager.php';
 
 $manager = new manager;
-$manager->connectBDD('portail','root','btssio');
+$manager->connectBDD('portail','root','');
 $manager->getLigneBDD();
 $manager->getItemBDD();
 include 'C/functionResizeImage.php';

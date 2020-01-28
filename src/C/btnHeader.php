@@ -12,26 +12,8 @@ if (isset($_POST['disconnect'])) {
 
 
 // si l'utilisateur est connecté et qu'il a cliqué sur le bouton "+ item" -> affiche la page de création d'item
-if ((isset($_SESSION["login"]))&&($_SESSION["login"]=="root")&&(isset($_POST['BtnNewItem']))) {
-   
-    echo "<div class='NewItem'>";
-    echo    "<h1>Ajout d'un Item</h1>"; 
-    echo    "<form action='#' method='post' enctype='multipart/form-data'>";
-    echo        "<p>Nom :</p><input type='text' name='nom' >";
-    echo        "<p>Lien Http :</p><input type='text' name='lienhttp' >";
-    echo        "<p>ReverseProxy (remplir ce champ uniquement il y en a besoin):</p><input type='text' name='ReverseProxy' value=''>";
-    echo        "<p>Numero de Ligne :</p><input type='text' name='numeroligne' >";
-    echo        "<p>Position dans la ligne :</p><input type='text' name='positionInLigne' >";
-
-    echo        "<p>Image :</p><input type='file' name='file' accept='image/png,'image/jpg, image/jpeg'>";
-    
-    echo        "<button type='submit' name='valideNewItem' submit>valider</button>";
-
-    echo        "<button type='submit' name='closeNewItem' submit>close</button>";         
-    echo    "</form>";
-    echo "</div>";   
-    
-
+if ((isset($_SESSION["login"]))&&($_SESSION["login"]=="root")&&(isset($_POST['BtnNewItem']))) {  
+    require "./V/popupNewItem.php";
 }
 
 // si l'utilisateur est connecté et qu'il a cliqué sur le bouton valider item -> envoie les données à la bdd  
@@ -68,15 +50,7 @@ if ((isset($_SESSION["login"]))&&($_SESSION["login"]=="root")&&(isset($_POST['va
 
 // si l'utilisateur est connecté et qu'il a cliqué sur le bouton "+ ligne" ->  affiche la page de création de ligne
 if ((isset($_SESSION["login"]))&&($_SESSION["login"]=="root")&&(isset($_POST['BtnNewLigne']))) {
-    echo "<div class='NewLigne'>";
-    echo    "<h1>Ajout d'une Ligne</h1>"; 
-    echo    "<form action='#' method='post' enctype='multipart/form-data'>";
-    echo        "<p>NomLigne :</p><input type='text' name='NomLigne' >";
-    echo        "<p>Numero de Ligne :</p><input type='text' name='numeroligne' >";
-    echo        "<button type='submit' name='valideNewLigne' submit>valider</button>";
-    echo        "<button type='submit' name='closeNewLigne' submit>close</button>";         
-    echo    "</form>";
-    echo "</div>";  
+    require "./V/popupNewLigne.php";
 }
 
 // si l'utilisateur est connecté et qu'il a cliqué sur le bouton valide Ligne -> envoie les données à la bdd  

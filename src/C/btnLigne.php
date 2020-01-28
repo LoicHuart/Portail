@@ -1,26 +1,7 @@
 <?php
 // si l'utilisateur est connecté et qu'il a cliqué sur le btnModifyLigne -> affiche la page de modify ligne
 if((isset($_SESSION["login"]))&&($_SESSION["login"]=="root")&&(isset($_POST['BtnModifyLigne']))){
-    echo "<div class='modifyLigne'>";
-    echo    "<form action='#' method='post'>";
-    echo        "<input type='hidden' name='id' value=".$_POST['id'].">";
-    echo        "<input type='hidden' name='nomligne' value=".$_POST['nomligne'].">";
-    echo        "<input type='hidden' name='numeroligne' value=".$_POST['numeroligne'].">";
-    echo        "<p>nom ligne :</p><input type='text' name='newNomLigne' value=".$_POST['nomligne'].">";
-    echo        "<p>numero ligne :</p><input type='text' name='newNumeroLigne' value=".$_POST['numeroligne'].">";
-    echo        "<h1>Modifier la position des items dans la ligne </h1>"; 
-    
-    foreach ($manager->getItem() as $donneesitems){
-        if($_POST['numeroligne'] === $donneesitems['numeroligne']){
-            echo "<p>".$donneesitems['nom'] ." :</p><input type='text' name="."positionItem_".$donneesitems['nom']." value=".$donneesitems['positionInLigne'].">";
-        }
-    }
-    echo        "<br/>";
-    echo        "<button type='submit' name='BtnValideModifyLigne' submit>valider</button>";
-
-    echo        "<button type='submit' name='BtnCloseModifyLigne' submit>close</button>";         
-    echo    "</form>";
-    echo "</div>";
+    require "./V/popupModifyLigne.php";
 }
 
 // si l'utilisateur est connecté et qu'il a cliqué sur le bouton BtnValideModifyLigne -> envoie les données à la bdd  
