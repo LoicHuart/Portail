@@ -1,5 +1,5 @@
 <?php
-$NOMTABLE = 'portail';
+$NOMBDD = 'PORTAIL';
 $IDENTIFIANT = '';
 $MDP = '';
 ?>
