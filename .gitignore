@@ -1,12 +1,7 @@
 # Exclude everything in the folder except .template
+.idea
 
 src/config/*
 !src/config/*.template
 
 src/css/img/cate/*
-
-
-
-
-
-.idea
