@@ -30,53 +30,161 @@ class manager
 		}
 	}
 
-
-
-	public function insertItem($nom,$lienhttp,$numLigne,$positionInLigne,$reverseProxy){
-		if(!empty($this->getItem())){
+	public function insertItem($image,$nom,$lienhttp,$numLigne,$positionInLigne,$reverseProxy){
+		if($this->getItem() != null){
 			foreach($this->getItem() as $donneesItem){
-				if(($donneesItem['nom'] != $nom)&&(!empty($nom))){
-					$test="true";
+				//test si le nom et deja attribué
+				if($donneesItem['nom'] != $nom){
+					$test = "true";
 				}else{
-					$test="numero Item deja attribuer";
-					break;
-				}
-				if(!empty($lienhttp)){
-					$test="true";
-				}else{
-					$test="veuillez fournir un lienhttp";
+					$test = "false";
 					break;
 				}
 			}
-		}else{
-			$test='true';
+		}else{ //si pas d'item 
+			$test = "true";
 		}
-		if(!empty($this->getLigne())){
-			foreach($this->getLigne() as $donneesItem){
-				if($donneesItem['numeroligne'] === $numLigne){
-					$test2="true";
+
+		if($this->getLigne() != null){
+			foreach($this->getLigne() as $donneesLigne){
+				//test si le numero de ligne et attribué
+				if($donneesLigne['numeroligne'] === $numLigne){
+					$test2 = "true";
 					break;
 				}else{
-					$test2="aucune ligne correspondant à ce numéro de ligne";
+					$test2 = "false";
 				}
 			}
-		}else{
-			$test='true';
+		}else{ //si pas de ligne
+			$test2 = "false";
 		}
-		if(($test==="true")&&($test2==="true")){
-			$cheminimage = 'css/img/cate/' . $nom .'.png';
-			$this->getBDD()->exec("INSERT INTO portail_items (nom, lienhttp, cheminimage, numeroligne,positionInLigne,reverseProxy) VALUES('$nom', '$lienhttp', '$cheminimage','$numLigne','$positionInLigne','$reverseProxy')");  
-			header("Refresh:0");
+
+		if(($test === "true")&&($test2 === "true")){
+			if ($_FILES["file"]["size"] < 300000)
+			{
+				$newfilename =  $_POST['nom'] . ".png";
+				if (move_uploaded_file($_FILES["file"]["tmp_name"],"css/img/cate/" . $newfilename));
+				{
+					resize_crop_image(200, 120, "css/img/cate/" . $newfilename, "css/img/cate/" . $newfilename);
+					$cheminimage = 'css/img/cate/' . $nom .'.png';
+					$this->getBDD()->exec("INSERT INTO portail_items (nom, lienhttp, cheminimage, numeroligne,positionInLigne,reverseProxy) VALUES('$nom', '$lienhttp', '$cheminimage','$numLigne','$positionInLigne','$reverseProxy')");
+					if(!empty($reverseProxy)){
+						$this->ajoutReverseProxy($lienhttp,$reverseProxy); 
+					}
+					header("Refresh:0");
+				}
+			}
+			elseif ($_FILES["file"]["size"] > 300000)
+			{
+				echo "Le fichier fourni et trop volumineux";
+			}
 		}else{
-			echo $test;
-			echo $test2;
+			if($test != "true"){
+				echo "Nom d'item déjà attribué";
+			}
+			if($test2 != "true"){
+				echo "numero de ligne non attribué";
+			}
+			
 		}
+		
 	}	
-	public function updateItem($id,$nom,$lienhttp,$numLigne,$ReverseProxy){
-		$this->getBDD()->exec("UPDATE portail_items SET nom='$nom', lienhttp='$lienhttp', cheminimage='css/img/cate/$nom.png', numeroligne=$numLigne, reverseProxy='$ReverseProxy' WHERE id=$id");
-		header("Refresh:0");
+	public function updateItem($image,$id,$nom,$lienhttp,$numLigne,$ReverseProxy){
+		if($this->getItem() != null){
+			foreach($this->getItem() as $donneesItem){
+				if($donneesItem['id'] === $id){
+					if($donneesItem['nom'] === $nom){
+						$test = "true";
+						break;
+					}else{
+						foreach($this->getItem() as $donneesItem){
+							if($donneesItem['nom'] != $nom){
+								$test = "true";
+							}else{
+								$test = "false";
+								break;
+							}
+						}
+					}
+				}
+			}	
+		}else{
+			$test = "true";
+		}
+		if($this->getLigne() != null){
+			foreach($this->getLigne() as $donneesLigne){
+				if($donneesLigne['numeroligne'] === $numLigne){
+					$test2 = "true";
+					break;
+				}else{
+					$test2 = "false";
+				}
+			}
+		}else{
+			$test2 = "false";
+		}
+
+		if(($test === "true")&&($test2 === "true")){
+			if(isset($image["file"]["name"])){
+				if ($image["file"]["size"] < 300000){
+					$newfilename =  $nom . ".png";
+					foreach($this->getItem() as $donneesitems){
+						if($donneesitems['id'] === $id){
+							unlink($donneesitems['cheminimage']);
+						}
+					}
+					if (move_uploaded_file($image["file"]["tmp_name"],"css/img/cate/" . $newfilename));
+					{
+						resize_crop_image(200, 120, "css/img/cate/" . $newfilename, "css/img/cate/" . $newfilename);
+					}
+				}
+				elseif ($image["file"]["size"] > 300000)
+				{
+					echo "Le fichier fourni et trop volumineux";
+				}
+			}else{
+				foreach($this->getItem() as $donneesitems){
+					if($donneesitems['id'] === $id){
+						rename($donneesitems['cheminimage'],"css/img/cate/" . $nom . ".png");
+					break;
+					}
+				}
+			}
+			if(isset($ReverseProxy)){
+				foreach($this->getItem() as $donneesitems){
+					if($donneesitems['id'] === $id){
+						if($donneesitems['reverseProxy'] != $ReverseProxy){
+							$this->suppReverseProxy($id);
+							$this->ajoutReverseProxy($lienhttp,$ReverseProxy);
+							break;
+						}
+					}
+				}
+				$this->getBDD()->exec("UPDATE portail_items SET nom='$nom', lienhttp='$lienhttp', cheminimage='css/img/cate/$nom.png', numeroligne=$numLigne, reverseProxy='$ReverseProxy' WHERE id=$id");
+				header("Refresh:0");
+			}else{
+				$this->getBDD()->exec("UPDATE portail_items SET nom='$nom', lienhttp='$lienhttp', cheminimage='css/img/cate/$nom.png', numeroligne=$numLigne, reverseProxy='' WHERE id=$id");
+				header("Refresh:0");
+			}
+		}else{
+			if($test != "true"){
+				echo "nom d'item deja attribué";
+			}
+			if($test2 != "true"){
+				echo "numero de ligne non attribué";
+			}
+		}
 	}
+
 	public function deleteItem($id){
+		foreach($this->getItem() as $donneesitems){
+			if($donneesitems['id'] === $id){
+				unlink($donneesitems['cheminimage']);
+				if($donneesitems['reverseProxy'] != ""){
+					$this->suppReverseProxy($id);
+				}
+			}
+		}
 		$this->getBDD()->exec("DELETE FROM portail_items WHERE id = $id");
 		header("Refresh:0");
 	} 
@@ -84,7 +192,7 @@ class manager
 
 
 	public function insertLigne($nomLigne,$numLigne){
-		if(!empty($this->getLigne())){
+		if($this->getLigne() != null){
 			foreach($this->getLigne() as $donneesligne){
 				if($donneesligne['nomligne'] != $nomLigne){
 					if($donneesligne['numeroligne'] != $numLigne){
@@ -116,8 +224,12 @@ class manager
 		$this->getBDD()->exec("DELETE FROM portail_ligne WHERE id = $id");
 		header("Refresh:0");
 	}
-	public function updatePositionItemInLigne($nom,$numLigne){
-		$this->getBDD()->exec("UPDATE portail_items SET positionInLigne='$numLigne' WHERE nom='$nom'");
+	public function updatePositionItemInLigne($id,$positionInLigne){
+		$this->getBDD()->exec("UPDATE portail_items SET positionInLigne='$positionInLigne' WHERE id='$id'");
+	}
+
+	public function updateNumLigneItem($ancienNumLigne,$newNumLigne){
+		$this->getBDD()->exec("UPDATE portail_items SET numeroligne='$newNumLigne' WHERE numeroligne='$ancienNumLigne'");
 	}
 
 
@@ -181,16 +293,12 @@ class manager
 		$test = 0;
 		while(($ligne = fgets($monfichier)) != false){
 			
-			if((trim($ligne) === "#".$reverseProxy) || ($test===1) || ($test===2) ){ 
-				
+			if((trim($ligne) === "#".$reverseProxy) || ($test===1) || ($test===2) ){ 		
 				$test=$test+1;
-				
-				
+
 	  		}else{
 	  			$ligneCache = $ligneCache.$ligne;
 	  		}
-	  		
-	  		
 		}
 		fseek($monfichier,0);
 	    fwrite($monfichier, $ligneCache);
@@ -199,7 +307,6 @@ class manager
 	    fwrite($monfichier, "\n                                                                  ");
 
 	    fclose($monfichier);
-
 	}
 }
 ?>

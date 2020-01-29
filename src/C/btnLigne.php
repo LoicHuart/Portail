@@ -5,35 +5,46 @@ if((isset($_SESSION["login"]))&&($_SESSION["login"]=="root")&&(isset($_POST['Btn
 }
 
 // si l'utilisateur est connecté et qu'il a cliqué sur le bouton BtnValideModifyLigne -> envoie les données à la bdd  
-if((isset($_SESSION["login"]))&&($_SESSION["login"]=="root")&&(isset($_POST['BtnValideModifyLigne']))){        
-    foreach ($manager->getItem() as $donneesitems){
-        if(isset($_POST["positionItem_".$donneesitems['nom']])){
-            $manager->updatePositionItemInLigne($donneesitems['nom'],$_POST["positionItem_".$donneesitems['nom']]);
-        }
-    }
-    if((isset($_POST['nomligne'])) && (isset($_POST['numeroligne'])) && (isset($_POST['id'])) && (isset($_POST['newNomLigne'])) && (isset($_POST['newNumeroLigne']))){
-        if($_POST['numeroligne'] != $_POST['newNumeroLigne']){
-            foreach ($manager->getLigne() as $donneesitems){
-                if($_POST['newNumeroLigne'] != $donneesitems['numeroligne']){
+if((isset($_SESSION["login"]))&&($_SESSION["login"]=="root")&&(isset($_POST['BtnValideModifyLigne']))){       
+    if((isset($_POST['newNomLigne'])) && (isset($_POST['numeroligne'])) && (isset($_POST['id']))){
+        $test = "false";
+        foreach ($manager->getLigne() as $donneesLigne){
+            if($_POST['id'] === $donneesLigne['id']){
+                if($_POST['newNumeroLigne'] === $donneesLigne['numeroligne']){
                     $test = "true";
-                }else{
-                    $test = "numero de ligne deja attribuer";
-                    echo $test;
-                    break;
+                    $manager->updateLigne($_POST['id'],$_POST['newNomLigne'],$donneesLigne['numeroligne']);   
+                    break; 
                 }
             }
-        }    
-        if($_POST['nomligne'] != $_POST['newNomLigne']){   
-            foreach ($manager->getItem() as $donneesitems){
-                if($donneesitems['numeroligne'] === $_POST['numeroligne']){
-                    $manager->updateItem($donneesitems['id'],$donneesitems['nom'],$donneesitems['lienhttp'],$_POST['newNumeroLigne']);
+            if($_POST['newNumeroLigne'] === $donneesLigne['numeroligne']){
+                //numero de ligne deja attribué
+                echo "numéro de ligne déjà attribué";
+                $test = "true";
+                break;
+            }
+        }
+        if($test != "true"){
+            //nouveau numero de ligne
+            echo "nouveau numero de ligne";
+            foreach ($manager->getLigne() as $donneesLigne){
+                if($_POST['id'] === $donneesLigne['id']){
+                    $ancienNumLigne = $donneesLigne['numeroligne'];
                 }
             }
             $manager->updateLigne($_POST['id'],$_POST['newNomLigne'],$_POST['newNumeroLigne']);
-        }
-        
+            foreach ($manager->getItem() as $donneesitems){
+                if($donneesitems['numeroligne'] === $ancienNumLigne){
+                    $manager->updateNumLigneItem($ancienNumLigne,$_POST['newNumeroLigne']);
+                }
+            }
+        }       
     }
-    header("Refresh:0");
+
+    foreach ($manager->getItem() as $donneesitems){
+        if(isset($_POST["idItem_".$donneesitems['id']])){
+            $manager->updatePositionItemInLigne($donneesitems['id'],$_POST["idItem_".$donneesitems['id']]);
+        }
+    }
 }
 
 // si l'utilisateur est connecté et qu'il a cliqué sur le bouton BtnDeleteLigne-> envoie les données à la bdd 
@@ -48,8 +59,7 @@ if((isset($_SESSION["login"]))&&($_SESSION["login"]=="root")&&(isset($_POST['Btn
                 $test = "true";
             }
         }
-    }
-    else{
+    }else{
         $test="true";
     }
     if($test === "true"){

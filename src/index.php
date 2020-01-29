@@ -1,9 +1,9 @@
 <?php
 session_start();
 include 'M/manager.php';
-
+include 'config/config.php';
 $manager = new manager;
-$manager->connectBDD('portail','root','');
+$manager->connectBDD($NOMTABLE,$IDENTIFIANT,$MDP);
 $manager->getLigneBDD();
 $manager->getItemBDD();
 include 'C/functionResizeImage.php';
