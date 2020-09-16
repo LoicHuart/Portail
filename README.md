@@ -1,10 +1,8 @@
-# CONTRIBUTORS
 
-BAHOUALA Aiman, GODARD Nathan, VEGA Florian, CARRE Raphael, MARCHAL Téo.
 
 # CONTEXT
 
-Site web developpé dans le cadre d'un projet collaboratif dans l'enceinte du lycée Gaspard Monge.
+portail permet de créer des liens vers d'autre site visible sous forme d'item cliquable (il est possible d'ajouter un reverse proxy sur les lien souhaité).
 
 # DEPLOYMENT
 
@@ -38,7 +36,3 @@ Site web developpé dans le cadre d'un projet collaboratif dans l'enceinte du ly
     
 5. Si modification du "nom id" d'un item, veuillez re-uploader l'image.
 
-# ISSUES
-
-1. Si l'image ne s'upload pas, cela vient surement d'un problème avec les droit du dossier src/css/img/cate. 
-    - executez la commande suivante : "chmod -R 777 cate"
